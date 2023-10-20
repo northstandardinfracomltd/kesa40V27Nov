@@ -42,62 +42,58 @@
       font-size: 16px;
       border: none;
       outline: none;
+      position: relative;
+    }
+
+    .animated-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typePlaceholder 4s steps(30, end) infinite, backgroundColorChange 1s ease 3s infinite;
+    }
+
+    @keyframes typePlaceholder {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    @keyframes backgroundColorChange {
+      0% {
+        background-color: transparent;
+      }
+      50% {
+        background-color: transparent;
+      }
+      100% {
+        background-color: yellow;
+      }
     }
   </style>
 </head>
 <body>
-  <input type="text" id="text-input" placeholder="" />
+  <input type="text" placeholder="" />
+  <div class="animated-placeholder">jaune</div>
   <script>
-    const placeholderText = ["Rouge,", "Bleu,", "Jaune,", "Orange,"];
+    const placeholderTexts = ["jaune", "bleu", "rouge", "orange", "pourpre", "vert"];
     let index = 0;
-    let typing = true;
-    let charIndex = 0;
-    const textInput = document.getElementById("text-input");
+    const animatedPlaceholder = document.querySelector(".animated-placeholder");
 
-    function typePlaceholder() {
-      const currentPlaceholder = placeholderText[index];
-      textInput.placeholder = currentPlaceholder.slice(0, charIndex);
-      charIndex++;
-      if (charIndex <= currentPlaceholder.length) {
-        setTimeout(typePlaceholder, 100);
-      } else {
-        if (typing) {
-          typing = false;
-          setTimeout(selectText, 1000);
-        }
-      }
-    }
-
-    function selectText() {
-      const currentPlaceholder = placeholderText[index];
-      const textToSelect = currentPlaceholder.slice(0, charIndex);
-      textInput.setSelectionRange(0, charIndex); // Sélectionner le texte
+    function updatePlaceholder() {
+      const currentPlaceholder = placeholderTexts[index];
+      animatedPlaceholder.textContent = currentPlaceholder;
+      index = (index + 1) % placeholderTexts.length;
       setTimeout(function() {
-        deselectText();
-      }, 1000);
+        updatePlaceholder();
+      }, 4000);
     }
 
-    function deselectText() {
-      textInput.setSelectionRange(0, 0); // Désélectionner le texte
-      setTimeout(erasePlaceholder, 500);
-    }
-
-    function erasePlaceholder() {
-      const currentPlaceholder = placeholderText[index];
-      let textToErase = currentPlaceholder.slice(0, charIndex);
-      textInput.placeholder = textToErase;
-      charIndex--;
-      if (charIndex >= 0) {
-        setTimeout(erasePlaceholder, 100);
-      } else {
-        typing = true;
-        index = (index + 1) % placeholderText.length;
-        charIndex = 0;
-        setTimeout(typePlaceholder, 500);
-      }
-    }
-
-    setTimeout(typePlaceholder, 500);
+    updatePlaceholder();
   </script>
 </body>
 </html>
