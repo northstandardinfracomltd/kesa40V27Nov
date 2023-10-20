@@ -29,75 +29,66 @@
       Each element is defined using tags, like this <div></div>
       The attributes like class="wrapper" let us style elements in the CSS
     -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <h1 class="title">Hello World!</h1>
-        <!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    input {
-      width: 200px;
-      padding: 10px;
-      font-size: 16px;
-      border: none;
-      outline: none;
-      position: relative;
-    }
+    <style>
+        .carreaux {
+            width: 100%;
+            background: #3498db; /* Couleur de fond bleu */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px;
+        }
 
-    .animated-placeholder {
-      position: absolute;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typePlaceholder 4s steps(30, end) infinite, backgroundColorChange 1s ease 3s infinite;
-    }
+        .carreau-grand {
+            width: calc(8 * 15px + 2px); /* Largeur de 8 petits carreaux plus la bordure */
+            height: calc(8 * 15px + 2px); /* Hauteur de 8 petits carreaux plus la bordure */
+            background: transparent; /* Fond transparent pour les grands carreaux */
+            border: 2px solid #fff; /* Bordure blanche de 2px d'épaisseur */
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-    @keyframes typePlaceholder {
-      0% {
-        width: 0;
-      }
-      100% {
-        width: 100%;
-      }
-    }
-
-    @keyframes backgroundColorChange {
-      0% {
-        background-color: transparent;
-      }
-      50% {
-        background-color: transparent;
-      }
-      100% {
-        background-color: yellow;
-      }
-    }
-  </style>
+        .carreau-petit {
+            width: 15px;
+            height: 15px;
+            background: #fff; /* Couleur de fond blanche pour les petits carreaux */
+            border: 1px solid #3498db; /* Bordure bleue pour les petits carreaux */
+        }
+    </style>
 </head>
 <body>
-  <input type="text" placeholder="" />
-  <div class="animated-placeholder">jaune</div>
-  <script>
-    const placeholderTexts = ["jaune", "bleu", "rouge", "orange", "pourpre", "vert"];
-    let index = 0;
-    const animatedPlaceholder = document.querySelector(".animated-placeholder");
-
-    function updatePlaceholder() {
-      const currentPlaceholder = placeholderTexts[index];
-      animatedPlaceholder.textContent = currentPlaceholder;
-      index = (index + 1) % placeholderTexts.length;
-      setTimeout(function() {
-        updatePlaceholder();
-      }, 4000);
-    }
-
-    updatePlaceholder();
-  </script>
+    <div class="carreaux">
+        <!-- Créez 12 grands carreaux -->
+        <div class="carreau-grand">
+            <!-- Créez 64 petits carreaux dans chaque grand carreau -->
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+            <div class="carreau-petit"></div>
+        </div>
+        <!-- Répétez ce bloc de grands carreaux 12 fois pour remplir la largeur -->
+    </div>
 </body>
 </html>
 
+    <div class="wrapper">
+      <div class="content" role="main">
+        <h1 class="title">Hello World!</h1>
+        
         <img
           src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
           class="illustration"
