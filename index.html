@@ -50,6 +50,7 @@
   <script>
     const placeholderText = ["Rouge,", "Bleu,", "Jaune,", "Orange,"];
     let index = 0;
+    let typing = true;
     let charIndex = 0;
     const textInput = document.getElementById("text-input");
 
@@ -60,17 +61,36 @@
       if (charIndex <= currentPlaceholder.length) {
         setTimeout(typePlaceholder, 100);
       } else {
-        setTimeout(erasePlaceholder, 1000);
+        if (typing) {
+          typing = false;
+          setTimeout(selectText, 1000);
+        }
       }
+    }
+
+    function selectText() {
+      const currentPlaceholder = placeholderText[index];
+      const textToSelect = currentPlaceholder.slice(0, charIndex);
+      textInput.setSelectionRange(0, charIndex); // Sélectionner le texte
+      setTimeout(function() {
+        deselectText();
+      }, 1000);
+    }
+
+    function deselectText() {
+      textInput.setSelectionRange(0, 0); // Désélectionner le texte
+      setTimeout(erasePlaceholder, 500);
     }
 
     function erasePlaceholder() {
       const currentPlaceholder = placeholderText[index];
-      textInput.placeholder = currentPlaceholder.slice(0, charIndex);
+      let textToErase = currentPlaceholder.slice(0, charIndex);
+      textInput.placeholder = textToErase;
       charIndex--;
       if (charIndex >= 0) {
         setTimeout(erasePlaceholder, 100);
       } else {
+        typing = true;
         index = (index + 1) % placeholderText.length;
         charIndex = 0;
         setTimeout(typePlaceholder, 500);
