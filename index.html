@@ -102,18 +102,77 @@
       
 /* Style de la barre de navigation */
 .barre-navigation {
+  z-index: 1 !important;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales en largeur */
     gap: 10px; /* Espacement entre les colonnes */
+  background: #fff !important;
+  border-bottom: 1px grey solid;
 }
 
 /* Style des colonnes */
-.colonne {
-    background-color: lightgray;
+.colonneX {
+    background-color: white;
     padding: 20px;
     text-align: center;
   
 }
+
+      
+/* Styles pour l'icône */
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.3s; /* Transition pour le fond au clic */
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+
+
+/* Styles pour le dropdown (masqué par défaut) */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px; /* Position sous l'icône */
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.item {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Au clic sur l'icône, afficher ou masquer le dropdown */
+.icon.active + .dropdown {
+    display: block;
+}
+
+/* Au clic sur l'icône, changer le style de l'icône */
+.icon.active .dot {
+    background-color: red;
+}
+
+
 
       
     </style>
@@ -122,7 +181,33 @@
     <div class="barre-navigation">
         <div class="colonneX">Texte Dummy 1</div>
         <div class="colonneX">Texte Dummy 2</div>
-        <div class="colonneX">Texte Dummy 3</div>
+        <div class="colonneX">
+      
+    <div class="menu-icon" id="menu-icon">
+        <div class="icon" id="icon">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="dropdown" id="dropdown">
+            <div class="item">Item1</div>
+            <div class="item">Item2</div>
+            <div class="item">Item3</div>
+        </div>
+    </div>
+    <script>
+        // JavaScript pour gérer le clic sur l'icône
+        const menuIcon = document.getElementById("menu-icon");
+        const icon = document.getElementById("icon");
+
+        menuIcon.addEventListener("click", function() {
+            icon.classList.toggle("active");
+        });
+    </script>
+      
+      
+      
+      </div>
     </div>
   
   
