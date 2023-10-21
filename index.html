@@ -153,7 +153,7 @@
     gap: 10px; /* Espacement entre les colonnes */
   background: #212121 !important;
   border-bottom: 1px #3b3b3b solid;
-  
+  height: 84px;
       position: -webkit-sticky; /* Pour une compatibilité avec les navigateurs WebKit */
     position: sticky;
     top: 0;
@@ -163,7 +163,7 @@
       
       
       .colonneX3 {
-    background-color: #212121;
+    background-color: transparent;
     padding: 20px;
     text-align: center;
   justify-content: center; 
@@ -177,19 +177,18 @@
       
       
 .colonneX {
-    background-color: #212121;
-    padding: 20px;
-    text-align: center;
+    background-color: transparent;
+    padding: 25px 0px 20px 20px;
+    text-align: left;
   justify-content: center; 
   align-items: center !important;
-    display: flex;
-        margin-left: auto;
+    display: block;
   margin-right: auto;
   
 }
       
       .colonneX2 {
-    background-color: #212121;
+    background-color: transparent;
     padding: 20px;
     text-align: center;
   display: flex;
@@ -381,8 +380,122 @@ input:focus, button:focus, textarea:focus {
         <div class="colonneX">
       
       
-                <img class="genesis" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/postman-logo-icon-orange.svg?v=1697920406226" >
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      .profile-name {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px; /* Taille de police */
+    font-weight: bold; /* Gras */
+    text-align: center; /* Alignement du texte */
+}
 
+/* Styler la flèche sous le nom */
+.profile-name::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.7);
+    transform: translateX(-50%);
+}
+
+/* Styler l'animation au survol */
+.profile-circle:hover .profile-name {
+    display: block;
+    background-color: #3498db; /* Couleur de fond au survol */
+    color: #fff; /* Couleur du texte au survol */
+}
+
+      
+        .group-container {
+            white-space: nowrap;
+            display: flex;
+        }
+
+        .profile-circle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 3px;
+            position: relative;
+        }
+
+        .profile-circle .profile-name {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        #circle1, #circle2, #circle0 {
+            background-image: url('https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/3b0eb833-4e9e-4640-ad22-10eda28cd8f6-small.jpg?v=1697922143137');
+            background-size: cover;
+          margin-left: -11px;
+          border: 3px solid #212121;
+        }
+
+        #circle3 {
+            background-color: rgb(254 107 54); /* Couleur de fond pour le 3ème cercle */
+            color: #fff; /* Couleur du texte */
+            text-align: center;
+            line-height: 26px;
+            font-weight: bold;
+          margin-left: -11px;
+          border: 3px solid #212121;
+        }
+    </style>
+</head>
+<body>
+    <div class="group-container">
+       <div class="profile-circle" id="circle0" onmouseover="showName('Ronan Roesch', this)" onmouseout="hideName(this)">
+            <div class="profile-name"></div>
+        </div>
+        <div class="profile-circle" id="circle1" onmouseover="showName('Ronan Roesch', this)" onmouseout="hideName(this)">
+            <div class="profile-name"></div>
+        </div>
+        <div class="profile-circle" id="circle2" onmouseover="showName('Nom Prénom 2', this)" onmouseout="hideName(this)">
+            <div class="profile-name"></div>
+        </div>
+        <div class="profile-circle" id="circle3" onmouseover="showName('99+', this)" onmouseout="hideName(this)">
+            <div class="profile-name"></div>
+        </div>
+        <div class="profile-circle" onmouseover="showName('Nom Prénom 4', this)" onmouseout="hideName(this)">
+            <div class="profile-name"></div>
+        </div>
+    </div>
+
+    <script>
+        function showName(name, circle) {
+            var profileName = circle.querySelector('.profile-name');
+            profileName.textContent = name;
+            profileName.style.display = 'block';
+        }
+
+        function hideName(circle) {
+            var profileName = circle.querySelector('.profile-name');
+            profileName.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
       
       
       
@@ -448,80 +561,7 @@ function remplacerEspaces(input) {
           
           <br>
           
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        .group-container {
-            white-space: nowrap;
-            display: flex;
-        }
 
-        .profile-circle {
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 3px;
-            position: relative;
-        }
-
-        .profile-circle .profile-name {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            display: none;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-
-        #circle1, #circle2 {
-            background-image: url('https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/3b0eb833-4e9e-4640-ad22-10eda28cd8f6-small.jpg?v=1697922143137');
-            background-size: cover;
-        }
-
-        #circle3 {
-            background-color: #3498db; /* Couleur de fond pour le 3ème cercle */
-            color: #fff; /* Couleur du texte */
-            text-align: center;
-            line-height: 26px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="group-container">
-        <div class="profile-circle" id="circle1" onmouseover="showName('Ronan Roesch', this)" onmouseout="hideName(this)">
-            <div class="profile-name"></div>
-        </div>
-        <div class="profile-circle" id="circle2" onmouseover="showName('Nom Prénom 2', this)" onmouseout="hideName(this)">
-            <div class="profile-name"></div>
-        </div>
-        <div class="profile-circle" id="circle3" onmouseover="showName('99+', this)" onmouseout="hideName(this)">
-            <div class="profile-name"></div>
-        </div>
-        <div class="profile-circle" onmouseover="showName('Nom Prénom 4', this)" onmouseout="hideName(this)">
-            <div class="profile-name"></div>
-        </div>
-    </div>
-
-    <script>
-        function showName(name, circle) {
-            var profileName = circle.querySelector('.profile-name');
-            profileName.textContent = name;
-            profileName.style.display = 'block';
-        }
-
-        function hideName(circle) {
-            var profileName = circle.querySelector('.profile-name');
-            profileName.style.display = 'none';
-        }
-    </script>
-</body>
-</html>
 
 
 
