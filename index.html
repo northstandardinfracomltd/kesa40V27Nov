@@ -16,7 +16,7 @@
             padding-left: 10px;
                       padding-right: 10px;
             z-index: 0;
-            margin-top: -40px;
+            margin-top: 20px;
 
         }
       
@@ -30,9 +30,6 @@
           max-width: 700px !important;
           margin-right: auto;
           margin-left: auto;
-          margin-top: -10px;
-                      opacity: 0.3; /* Par défaut, pas d'opacité */
-            transition: opacity 0.2s;
 
           
         }
@@ -44,8 +41,8 @@
             background-color: #262626;
             max-width: 700px !important;
             margin: 0 auto; /* Centre la div enfant horizontalement */
-            border: 2px solid rgb(62, 146, 242);
-          border-radius: 0px;
+            border: 1px solid rgb(62, 146, 242);
+          border-radius: 12px 12px 0px 0px;
             padding: 20px; /* Ajoute un peu d'espace intérieur */
         }
       
@@ -360,18 +357,6 @@ function remplacerEspaces(input) {
     input.value = input.value.replace(/ /g, "_");
 }
 
-        function verifierChamp() {
-            var champ = document.getElementById("mon-champ");
-            var divParente = document.querySelector(".div-parente");
-
-            if (!champ.value) {
-                // Champ est vide, appliquer le style d'opacité
-                divParente.style.opacity = 0.3;
-            } else {
-                // Champ a du texte, supprimer le style d'opacité
-                divParente.style.opacity = 1;
-            }
-        }
       
 
     </script>
@@ -388,6 +373,8 @@ function remplacerEspaces(input) {
         <div class="dropdown" id="dropdown">
             <div class="item">English Version</div>
             <div class="item">À propos</div>
+                      <div class="item">Zip Références</div>
+
             <div class="item">Nous contacter</div>
           <div class="item">Mentions juridiques</div>
         </div>
