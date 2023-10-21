@@ -432,6 +432,15 @@ input:focus, button:focus, textarea:focus {
             margin-right: 3px;
             position: relative;
         }
+      
+      
+      .profile-circle:hover {
+        cursor: pointer !important;
+            transform: scale(1.08);
+    transition-duration: 0.2s;
+        }
+      
+      
 
         .profile-circle .profile-name {
             position: absolute;
@@ -471,15 +480,13 @@ input:focus, button:focus, textarea:focus {
         <div class="profile-circle" id="circle1" onmouseover="showName('Ronan Roesch', this)" onmouseout="hideName(this)">
             <div class="profile-name"></div>
         </div>
-        <div class="profile-circle" id="circle2" onmouseover="showName('Nom Prénom 2', this)" onmouseout="hideName(this)">
+        <div class="profile-circle" id="circle2" onmouseover="showName('Eric à visité hier', this)" onmouseout="hideName(this)">
             <div class="profile-name"></div>
         </div>
         <div class="profile-circle" id="circle3" onmouseover="showName('99+', this)" onmouseout="hideName(this)">
             <div class="profile-name"></div>
         </div>
-        <div class="profile-circle" onmouseover="showName('Nom Prénom 4', this)" onmouseout="hideName(this)">
-            <div class="profile-name"></div>
-        </div>
+
     </div>
 
     <script>
