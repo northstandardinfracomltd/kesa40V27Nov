@@ -32,3 +32,13 @@ const filer = document.querySelectorAll(".fileopener");
 filer.forEach((f) => {
   f.onclick = () => { goto(f.dataset.file, f.dataset.line); };
 });
+
+
+
+function transformerEnMinuscules(input) {
+    input.value = input.value.toLowerCase();
+}
+
+function remplacerEspaces(input) {
+    input.value = input.value.replace(/ /g, "_");
+}

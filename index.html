@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemple de Div Parente et Enfant</title>
     <style>
+      
+      body {
+    background: #ffffff;
+    margin: 0px !important;
+    overflow-x: hidden;
+         }
+      
+          .div-lidar {
+            padding-left: 10px;
+                      padding-right: 10px;
+            z-index: 0;
+
+        }
+      
         /* Style de la div parente */
         .div-parente {
             background-color: white;
@@ -115,7 +129,22 @@
     background-color: white;
     padding: 20px;
     text-align: center;
+  justify-content: center; 
+  align-items: center !important;
+    display: flex;
+        margin-left: auto;
+  margin-right: auto;
   
+}
+      
+      .colonneX2 {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  display: flex;
+        margin-left: auto;
+   justify-content: center; 
+        align-items: center !important;
 }
 
       
@@ -173,6 +202,17 @@
 }
 
 
+              /* Style du bouton */
+        .boutonclovis {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0073aa;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+        }
 
       
     </style>
@@ -180,8 +220,23 @@
 <body>
     <div class="barre-navigation">
         <div class="colonneX">Texte Dummy 1</div>
-        <div class="colonneX">Texte Dummy 2</div>
         <div class="colonneX">
+          
+          
+          
+          
+            <label for="mon-champ">Texte en lettres minuscules (max 50 caractères):</label>
+    <input type="text" id="mon-champ" oninput="transformerEnMinuscules(this)" oninput="remplacerEspaces(this)" maxlength="50">
+
+      
+      
+      
+      
+      
+      
+      
+      </div>
+        <div class="colonneX2">
       
     <div class="menu-icon" id="menu-icon">
         <div class="icon" id="icon">
@@ -204,13 +259,15 @@
             icon.classList.toggle("active");
         });
     </script>
-      
+          <a href="https://votre-lien-ici.com" class="boutonclovis">Cliquez ici</a>
+
       
       
       </div>
     </div>
   
-  
+      <div class="div-lidar">
+
     <div class="div-parente">
         <div class="div-enfant">
           
@@ -276,6 +333,7 @@
         </div>
    <a href="#" class="lien-bouton-bleu">Texte Bleu</a>
     </div>
+         </div>
 </body>
 </html>
 
