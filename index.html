@@ -10,6 +10,7 @@
             background-color: white;
             width: 100%;
             text-align: center;
+          
         }
 
         /* Style de la div enfant */
@@ -21,28 +22,7 @@
             padding: 20px; /* Ajoute un peu d'espace intérieur */
         }
       
-      
-      
-    </style>
-</head>
-<body>
-    <div class="div-parente">
-        <div class="div-enfant">
-            Contenu de la div enfant centrée
-        </div>
-    </div>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Options de Sélection</title>
-    <style>
-        .div-structure {
+              .div-structure {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
@@ -62,11 +42,75 @@
         .selected {
             background-color: red !important;
         }
+      
+              /* Style du lien */
+        .lien-violet {
+            display: block; /* Transforme le lien en bloc pour occuper toute la largeur */
+            background-color: violet;
+            color: white;
+          margin-top: 12px;
+            text-align: center;
+            padding: 15px 0; /* Espacement vertical pour le lien */
+            text-decoration: none; /* Supprime le soulignement par défaut des liens */
+        }
+      
+      
+              /* Style du lien bouton bleu */
+        .lien-bouton-bleu {
+            display: block; /* Transforme le lien en bloc pour occuper toute la largeur */
+            background-color: blue;
+            color: white;
+            text-align: center;
+          max-width: 745px !important;
+          margin-left: auto;
+          margin-right: auto;
+            padding: 15px 0; /* Espacement vertical pour le lien bouton */
+            text-decoration: none; /* Supprime le soulignement par défaut des liens */
+        }
+      
+              .titre-dummy {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #333; /* Couleur du texte */
+        }
+      
+      
+        /* Style du sous-titre avec une classe */
+        .sous-titre-dummy {
+            font-size: 18px;
+            text-align: center;
+            color: #666; /* Couleur du texte */
+        }
+      
+              /* Style de l'icône */
+        .icone {
+            display: block;
+            margin: 0 auto; /* Centre l'icône horizontalement */
+        }
+
+        /* Style du titre */
+        .titre {
+            font-size: 16px;
+            text-align: center;
+        }
+      
     </style>
 </head>
 <body>
-    <div class="div-structure">
-        <div class="div-content">Option 1</div>
+    <div class="div-parente">
+        <div class="div-enfant">
+          
+              <h1 class="titre-dummy">Ceci est un Titre Dummy</h1>
+
+              <h2 class="sous-titre-dummy">Ceci est un Sous-titre Dummy</h2>
+
+          
+             <div class="div-structure">
+        <div class="div-content">
+                       <img class="icone" src="chemin_vers_votre_image.png" alt="Icône">
+        <p class="titre">Titre de 16px</p>
+               </div>
         <div class="div-content">Option 2</div>
         <div class="div-content">Option 3</div>
         <div class="div-content">Option 4</div>
@@ -91,5 +135,16 @@
             });
         });
     </script>
+          
+              <a href="#" class="lien-violet">Lien Violet Full Width</a>
+          <br>
+                 
+
+          
+        </div>
+   <a href="#" class="lien-bouton-bleu">Texte Bleu</a>
+    </div>
 </body>
 </html>
+
+
