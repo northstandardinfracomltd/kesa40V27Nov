@@ -285,7 +285,45 @@
 }
       
       
-      
+      .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0px;
+  width: 100%;
+  max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        padding-left: 10px;
+        padding-right: 10px;
+}
+
+.text-container {
+  padding: 20px;
+}
+
+.image-container {
+  padding: 20px;
+}
+
+.titrexx2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sous-titrexx {
+  font-size: 18px;
+}
+
+.imageray {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* Ajoutez d'autres styles spécifiques aux classes selon vos besoins */
+
       
       
       
@@ -389,27 +427,27 @@ function remplacerEspaces(input) {
         <div class="div-structure">
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
-        <p class="titre">PDF Catalog</p>
+        <p class="titrex">PDF Catalog</p>
         </div>
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
-        <p class="titre">PDF Catalog</p>
+        <p class="titrex">PDF Catalog</p>
         </div>
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
-        <p class="titre">PDF Catalog</p>
+        <p class="titrex">PDF Catalog</p>
         </div>
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
-        <p class="titre">PDF Catalog</p>
+        <p class="titrex">PDF Catalog</p>
         </div>
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
-        <p class="titre">PDF Catalog</p>
+        <p class="titrex">PDF Catalog</p>
         </div>
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
-        <p class="titre">PDF Catalog</p>
+        <p class="titrex">PDF Catalog</p>
         </div>
                
     </div>
@@ -441,6 +479,28 @@ function remplacerEspaces(input) {
    <a href="#" class="lien-bouton-bleu">Texte Bleu</a>
     </div>
          </div>
+  
+  
+  
+  
+  <div class="grid-container">
+    <div class="column-left">
+      <div class="text-container">
+        <h1 class="titrexx2">Titre</h1>
+        <h2 class="sous-titrexx">Sous-titre</h2>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="image-container">
+        <a href="https://example.com">
+          <img class="imageray" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/domains-happy-chat-1.png?v=1697904052263" >
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
 </body>
 </html>
 
