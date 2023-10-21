@@ -72,15 +72,8 @@
 
         /* Classe pour la couleur rouge au clic */
         .selected {
-            background-color: #553326 !important;
+            background-color: red !important;
           box-shadow: 0 0 0px 4px #008eff38;
-        }
-      
-            footer {
-            background-color: #262626 !important; /* Couleur de fond du footer */
-            color: #fff; /* Couleur du texte */
-            text-align: center; /* Alignement du texte au centre */
-            padding: 20px; /* Espacement intérieur du footer */
         }
       
               /* Style du lien */
@@ -96,6 +89,14 @@
             text-decoration: none; /* Supprime le soulignement par défaut des liens */
         }
       
+      
+            footer {
+            background-color: transparent; /* Couleur de fond du footer */
+              border-top: 1px solid #3b3b3b;
+            color: #fff; /* Couleur du texte */
+            text-align: center; /* Alignement du texte au centre */
+            padding: 20px; /* Espacement intérieur du footer */
+        }
       
       .lien-violet:hover  {
     box-shadow: 0 0 0px 4px #008eff38;
@@ -305,28 +306,44 @@
 }
       
       
-      .grid-containerptt {
+      .grid-container {
   display: block;
   grid-gap: 0px;
   width: 100%;
+  max-width: 700px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 80px;
         margin-bottom: 80px;
         padding-left: 10px;
-        text-align: center;
         padding-right: 10px;
+        text-align: center;
 }
 
+.text-container {
+  padding: 20px;
+}
 
+.image-container {
+  padding: 20px;
+}
 
-.imagerayxc {
+.titrexx2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sous-titrexx {
+  font-size: 18px;
+}
+
+.imageray {
   width: 100%;
-  max-width: 500px !important;
+  max-width: 490px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: auto;
 }
 
 /* Ajoutez d'autres styles spécifiques aux classes selon vos besoins */
@@ -478,18 +495,14 @@ function remplacerEspaces(input) {
   
   
   
-  <div class="grid-containerptt">
-    
-              <img class="imagerayxc" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/domains-happy-chat-1.png?v=1697904052263" >
-
+  <div class="grid-container">
+          <img class="imageray" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/domains-happy-chat-1.png?v=1697904052263" >
 
   </div>
   
   
-  
-  
       <footer>
-        <p>Comduo is monitored by SaaSduo and partner with Automaticc</p>
+        <p>Comduo is a partner of Automaticc</p>
     </footer>
   
   
