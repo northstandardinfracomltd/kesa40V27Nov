@@ -454,6 +454,7 @@ function remplacerEspaces(input) {
     <style>
         .group-container {
             white-space: nowrap;
+            display: flex;
         }
 
         .profile-circle {
@@ -465,36 +466,20 @@ function remplacerEspaces(input) {
             position: relative;
         }
 
-        .profile-circle:hover::after {
-            content: attr(data-name);
+        .profile-circle .profile-name {
             position: absolute;
-            bottom: -30px;
+            top: 100%;
             left: 50%;
             transform: translateX(-50%);
+            display: none;
             background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             padding: 5px 10px;
             border-radius: 5px;
-            white-space: nowrap;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .profile-circle:hover::before {
-            content: "";
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            border-width: 5px;
-            border-style: solid;
-            border-color: transparent transparent rgba(0, 0, 0, 0.7);
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s;
         }
 
         #circle1, #circle2 {
-            background-image: url('url_de_votre_image.jpg');
+            background-image: url('https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/3b0eb833-4e9e-4640-ad22-10eda28cd8f6-small.jpg?v=1697922143137');
             background-size: cover;
         }
 
@@ -509,14 +494,38 @@ function remplacerEspaces(input) {
 </head>
 <body>
     <div class="group-container">
-        <div class="profile-circle" id="circle1" data-name="Ronan Roesch"></div>
-        <div class="profile-circle" id="circle2" data-name="Nom Prénom 2"></div>
-        <div class="profile-circle" id="circle3" data-name="99+"></div>
-        <div class="profile-circle" data-name="Nom Prénom 4"></div>
+        <div class="profile-circle" id="circle1" onmouseover="showName('Ronan Roesch', this)" onmouseout="hideName(this)">
+            <div class="profile-name"></div>
+        </div>
+        <div class="profile-circle" id="circle2" onmouseover="showName('Nom Prénom 2', this)" onmouseout="hideName(this)">
+            <div class="profile-name"></div>
+        </div>
+        <div class="profile-circle" id="circle3" onmouseover="showName('99+', this)" onmouseout="hideName(this)">
+            <div class="profile-name"></div>
+        </div>
+        <div class="profile-circle" onmouseover="showName('Nom Prénom 4', this)" onmouseout="hideName(this)">
+            <div class="profile-name"></div>
+        </div>
     </div>
+
+    <script>
+        function showName(name, circle) {
+            var profileName = circle.querySelector('.profile-name');
+            profileName.textContent = name;
+            profileName.style.display = 'block';
+        }
+
+        function hideName(circle) {
+            var profileName = circle.querySelector('.profile-name');
+            profileName.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
 
+
+
+          
               <h1 class="titre-dummy">Que souhaitez-vous créer</h1>
 
               <h2 class="sous-titre-dummy">Quelle catégorie définie le mieux le projet que vous souhaitez</h2>
