@@ -20,6 +20,8 @@
 
         }
       
+      
+      
         /* Style de la div parente */
         .div-parente {
             background-color: white;
@@ -29,10 +31,13 @@
           margin-right: auto;
           margin-left: auto;
           margin-top: -10px;
-                      opacity: 1; /* Par défaut, pas d'opacité */
+                      opacity: 0.5; /* Par défaut, pas d'opacité */
+            transition: opacity 0.2s;
 
           
         }
+      
+
 
         /* Style de la div enfant */
         .div-enfant {
@@ -250,6 +255,8 @@
               width: 100%;
               max-width: 500px;
 }
+      
+      
 
       
     </style>
@@ -259,8 +266,11 @@
         <div class="colonneX">Texte Dummy 1</div>
         <div class="colonneX3">
           
-    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" title="Utilisez des lettres minuscules et _ (tiret bas)" required placeholder="Nommez votre projet" oninput="verifierChamp()" onfocus="verifierChamp()" maxlength="20" autocomplete="off">
-    <script>
+          
+          
+
+    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" title="Utilisez des lettres minuscules et _ (tiret bas)" required placeholder="Commencez par nommer le projet" oninput="verifierChamp()" onfocus="verifierChamp()" maxlength="20" autocomplete="off">
+          <script>
       
       // Fonction pour remplacer les espaces par des tirets bas
 function remplacerEspaces(input) {
@@ -274,11 +284,14 @@ function remplacerEspaces(input) {
             if (!champ.value) {
                 // Champ est vide, appliquer le style d'opacité
                 divParente.style.opacity = 0.5;
+              divParente.style.cursor = 0.5;
             } else {
                 // Champ a du texte, supprimer le style d'opacité
                 divParente.style.opacity = 1;
             }
         }
+      
+
     </script>
           
       </div>
