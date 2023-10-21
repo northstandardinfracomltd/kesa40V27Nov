@@ -41,10 +41,10 @@
 
         /* Style de la div enfant */
         .div-enfant {
-            background-color: lightgrey;
+            background-color: #262626;
             max-width: 700px !important;
             margin: 0 auto; /* Centre la div enfant horizontalement */
-            border: 2px solid blue;
+            border: 2px solid rgb(62, 146, 242);
           border-radius: 0px;
             padding: 20px; /* Ajoute un peu d'espace intérieur */
         }
@@ -200,7 +200,7 @@
 .dot {
     width: 4.5px;
     height: 4.5px;
-    background-color: #a6a6a6;
+    background-color: #ff6c37;
     border-radius: 50%;
 }
 
@@ -239,23 +239,22 @@ top: 40px;
         .boutonclovis {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #0073aa;
+            background-color: #ff6c37;
             color: #fff;
             font-size: 16px;
             text-decoration: none;
             border: none;
             border-radius: 10px;
           height: 22px;
-              border: 1px solid #0073aa;
+              border: 1px solid #ff6c37;
 width: 120px;
            cursor: pointer;
         }
 
               .boutonclovis:hover {
-            background-color: #077eb7 ;
-        transform: scale(1.03);
-    transition-duration: 0.2s;
+            background-color: #ff6c37 ;
                  cursor: pointer;
+                    box-shadow: 0 0 0px 4px #008eff38;
 }
       
       
@@ -273,14 +272,13 @@ width: 120px;
               width: 100%;
               max-width: 500px;
               background: #2B2B2B;
-               cursor: pointer;
+               cursor: text;
 }
       
       
                     .projectname:hover {
-        transform: scale(1.03);
-    transition-duration: 0.2s;
-                      cursor: pointer;
+    box-shadow: 0 0 0px 4px #008eff38;
+                      cursor: text;
 }
       
       
@@ -313,7 +311,7 @@ input:focus, button:focus, textarea:focus {
           
           
 
-    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" title="Utilisez des lettres minuscules et _ (tiret bas)" autofocus required placeholder="Débutons par nommer votre idée" oninput="verifierChamp()" onfocus="verifierChamp()" maxlength="20" autocomplete="off">
+    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" autofocus required placeholder="Débutons par nommer votre idée" oninput="verifierChamp()" onfocus="verifierChamp()" maxlength="20" autocomplete="off">
           <script>
       
       // Fonction pour remplacer les espaces par des tirets bas
