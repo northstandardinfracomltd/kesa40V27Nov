@@ -58,7 +58,7 @@
         }
 
         .div-content {
-            background-color: lavender;
+            background-color: #2b2b2b;
             border-radius: 10px;
             padding: 20px;
             text-align: center;
@@ -85,12 +85,14 @@
               /* Style du lien bouton bleu */
         .lien-bouton-bleu {
             display: block; /* Transforme le lien en bloc pour occuper toute la largeur */
-            background-color: blue;
+            background-color: rgb(62, 146, 242);
             color: white;
             text-align: center;
           width: 100% !important;
+          height: 34px;
           margin-left: auto;
           margin-right: auto;
+          border-radius: 0px 0px 12px 12px;
             padding: 15px 0; /* Espacement vertical pour le lien bouton */
             text-decoration: none; /* Supprime le soulignement par défaut des liens */
         }
@@ -210,12 +212,13 @@
 .dropdown {
     display: none;
     position: absolute;
-top: 40px;
+    top: 30px;
+    right: -15px;
     background-color: #2b2b2b;
     border: 1px solid #3b3b3b;
     border-radius: 10px;
     color: #a6a6a6;
-    min-width: 150px;
+    min-width: 100px;
 }
 
 .item {
@@ -239,20 +242,20 @@ top: 40px;
         .boutonclovis {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #ff6c37;
+            background-color: #2B2B2B;
             color: #fff;
             font-size: 16px;
             text-decoration: none;
             border: none;
             border-radius: 10px;
           height: 22px;
-              border: 1px solid #ff6c37;
-width: 120px;
+              border: 1px solid #2B2B2B;
            cursor: pointer;
+          display: none;
         }
 
               .boutonclovis:hover {
-            background-color: #ff6c37 ;
+            background-color: #2B2B2B ;
                  cursor: pointer;
                     box-shadow: 0 0 0px 4px #008eff38;
 }
@@ -345,9 +348,9 @@ function remplacerEspaces(input) {
             <div class="dot"></div>
         </div>
         <div class="dropdown" id="dropdown">
-            <div class="item">Item1</div>
-            <div class="item">Item2</div>
-            <div class="item">Item3</div>
+            <div class="item">Français</div>
+            <div class="item">English</div>
+            <div class="item">Deutsh</div>
         </div>
     </div>
     <script>
