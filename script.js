@@ -35,10 +35,3 @@ filer.forEach((f) => {
 
 
 
-function transformerEnMinuscules(input) {
-    input.value = input.value.toLowerCase();
-}
-
-function remplacerEspaces(input) {
-    input.value = input.value.replace(/ /g, "_");
-}

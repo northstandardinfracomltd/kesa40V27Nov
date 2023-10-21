@@ -213,6 +213,15 @@
             border: none;
             border-radius: 5px;
         }
+      
+      
+      .mon-champ-personnalise {
+    padding: 10px;
+    border: 1px solid #0073aa;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+}
 
       
     </style>
@@ -224,14 +233,8 @@
           
           
           
-          
-            <label for="mon-champ">Texte en lettres minuscules (max 50 caractères):</label>
-    <input type="text" id="mon-champ" oninput="transformerEnMinuscules(this)" oninput="remplacerEspaces(this)" maxlength="50">
+    <input type="text" id="mon-champ" class="mon-champ-personnalise" pattern="[a-z_]{1,50}" title="Utilisez des lettres minuscules et _ (tiret bas)" required placeholder="dummy">
 
-      
-      
-      
-      
       
       
       

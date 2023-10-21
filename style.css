@@ -116,7 +116,10 @@ body {
   margin: 0px !important;
 }
 
-
+.body {
+    display: block;
+    margin: 0px;
+}
 
 /* Page structure */
 .wrapper {
