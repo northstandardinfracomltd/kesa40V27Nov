@@ -448,6 +448,74 @@ function remplacerEspaces(input) {
           
           <br>
           
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .group-container {
+            white-space: nowrap;
+        }
+
+        .profile-circle {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 3px;
+            position: relative;
+        }
+
+        .profile-circle:hover::after {
+            content: attr(data-name);
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .profile-circle:hover::before {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent rgba(0, 0, 0, 0.7);
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        #circle1, #circle2 {
+            background-image: url('url_de_votre_image.jpg');
+            background-size: cover;
+        }
+
+        #circle3 {
+            background-color: #3498db; /* Couleur de fond pour le 3ème cercle */
+            color: #fff; /* Couleur du texte */
+            text-align: center;
+            line-height: 26px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="group-container">
+        <div class="profile-circle" id="circle1" data-name="Ronan Roesch"></div>
+        <div class="profile-circle" id="circle2" data-name="Nom Prénom 2"></div>
+        <div class="profile-circle" id="circle3" data-name="99+"></div>
+        <div class="profile-circle" data-name="Nom Prénom 4"></div>
+    </div>
+</body>
+</html>
 
               <h1 class="titre-dummy">Que souhaitez-vous créer</h1>
 
