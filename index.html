@@ -10,6 +10,10 @@
             background-color: white;
             width: 100%;
             text-align: center;
+          max-width: 700px !important;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: -10px;
           
         }
 
@@ -19,6 +23,7 @@
             max-width: 700px !important;
             margin: 0 auto; /* Centre la div enfant horizontalement */
             border: 2px solid blue;
+          border-radius: 0px;
             padding: 20px; /* Ajoute un peu d'espace intérieur */
         }
       
@@ -61,7 +66,7 @@
             background-color: blue;
             color: white;
             text-align: center;
-          max-width: 745px !important;
+          width: 100% !important;
           margin-left: auto;
           margin-right: auto;
             padding: 15px 0; /* Espacement vertical pour le lien bouton */
@@ -95,27 +100,69 @@
             text-align: center;
         }
       
+/* Style de la barre de navigation */
+.barre-navigation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales en largeur */
+    gap: 10px; /* Espacement entre les colonnes */
+}
+
+/* Style des colonnes */
+.colonne {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+  
+}
+
+      
     </style>
 </head>
 <body>
+    <div class="barre-navigation">
+        <div class="colonneX">Texte Dummy 1</div>
+        <div class="colonneX">Texte Dummy 2</div>
+        <div class="colonneX">Texte Dummy 3</div>
+    </div>
+  
+  
     <div class="div-parente">
         <div class="div-enfant">
+          
+          <br>
+          <br>
           
               <h1 class="titre-dummy">Ceci est un Titre Dummy</h1>
 
               <h2 class="sous-titre-dummy">Ceci est un Sous-titre Dummy</h2>
 
           
-             <div class="div-structure">
+        <div class="div-structure">
         <div class="div-content">
-                       <img class="icone" src="chemin_vers_votre_image.png" alt="Icône">
-        <p class="titre">Titre de 16px</p>
-               </div>
-        <div class="div-content">Option 2</div>
-        <div class="div-content">Option 3</div>
-        <div class="div-content">Option 4</div>
-        <div class="div-content">Option 5</div>
-        <div class="div-content">Option 6</div>
+        <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
+        <p class="titre">PDF Catalog</p>
+        </div>
+        <div class="div-content">
+        <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
+        <p class="titre">PDF Catalog</p>
+        </div>
+        <div class="div-content">
+        <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
+        <p class="titre">PDF Catalog</p>
+        </div>
+        <div class="div-content">
+        <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
+        <p class="titre">PDF Catalog</p>
+        </div>
+        <div class="div-content">
+        <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
+        <p class="titre">PDF Catalog</p>
+        </div>
+        <div class="div-content">
+        <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
+        <p class="titre">PDF Catalog</p>
+        </div>
+               
     </div>
 
     <script>
@@ -137,7 +184,7 @@
     </script>
           
               <a href="#" class="lien-violet">Lien Violet Full Width</a>
-          <br>
+       
                  
 
           
