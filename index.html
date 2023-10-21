@@ -16,6 +16,7 @@
             padding-left: 10px;
                       padding-right: 10px;
             z-index: 0;
+            margin-top: -40px;
 
         }
       
@@ -129,6 +130,22 @@
 }
 
 /* Style des colonnes */
+      
+      
+      .colonneX3 {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  justify-content: center; 
+  align-items: center !important;
+    display: block;
+        margin-left: auto;
+  margin-right: auto;
+        width: 90%;
+  
+}
+      
+      
 .colonneX {
     background-color: white;
     padding: 20px;
@@ -219,14 +236,17 @@
         }
       
       
-      .mon-champ-personnalise {
+
+      
+            .projectname {
     padding: 10px;
     border: 1px solid #0073aa;
     border-radius: 5px;
     font-size: 16px;
     width: 200px;
-        text-transform: lowercase;
         text-align: center;
+              width: 100%;
+              max-width: 500px;
 }
 
       
@@ -235,9 +255,9 @@
 <body>
     <div class="barre-navigation">
         <div class="colonneX">Texte Dummy 1</div>
-        <div class="colonneX">
+        <div class="colonneX3">
           
-    <input type="text" id="mon-champ" class="mon-champ-personnalise" pattern="[a-z_]{1,50}" title="Utilisez des lettres minuscules et _ (tiret bas)" required placeholder="Nommez votre projet" oninput="remplacerEspaces(this)" maxlength="20" autocomplete="off">
+    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" title="Utilisez des lettres minuscules et _ (tiret bas)" required placeholder="Nommez votre projet" oninput="remplacerEspaces(this)" maxlength="20" autocomplete="off">
    <script src="script.js"></script>
           
       </div>
@@ -277,13 +297,13 @@
         <div class="div-enfant">
           
           <br>
-          <br>
+          <br><br>
           
               <h1 class="titre-dummy">Ceci est un Titre Dummy</h1>
 
               <h2 class="sous-titre-dummy">Ceci est un Sous-titre Dummy</h2>
-
-          
+<br>
+          <br>
         <div class="div-structure">
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Untitled%20design.svg?v=1697881272375" alt="Icône">
