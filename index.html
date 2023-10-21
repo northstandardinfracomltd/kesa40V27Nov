@@ -29,6 +29,8 @@
           margin-right: auto;
           margin-left: auto;
           margin-top: -10px;
+                      opacity: 1; /* Par défaut, pas d'opacité */
+
           
         }
 
@@ -257,8 +259,27 @@
         <div class="colonneX">Texte Dummy 1</div>
         <div class="colonneX3">
           
-    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" title="Utilisez des lettres minuscules et _ (tiret bas)" required placeholder="Nommez votre projet" oninput="remplacerEspaces(this)" maxlength="20" autocomplete="off">
-   <script src="script.js"></script>
+    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" title="Utilisez des lettres minuscules et _ (tiret bas)" required placeholder="Nommez votre projet" oninput="verifierChamp()" onfocus="verifierChamp()" maxlength="20" autocomplete="off">
+    <script>
+      
+      // Fonction pour remplacer les espaces par des tirets bas
+function remplacerEspaces(input) {
+    input.value = input.value.replace(/ /g, "_");
+}
+
+        function verifierChamp() {
+            var champ = document.getElementById("mon-champ");
+            var divParente = document.querySelector(".div-parente");
+
+            if (!champ.value) {
+                // Champ est vide, appliquer le style d'opacité
+                divParente.style.opacity = 0.5;
+            } else {
+                // Champ a du texte, supprimer le style d'opacité
+                divParente.style.opacity = 1;
+            }
+        }
+    </script>
           
       </div>
         <div class="colonneX2">
@@ -284,7 +305,9 @@
             icon.classList.toggle("active");
         });
     </script>
+          
           <a href="https://votre-lien-ici.com" class="boutonclovis">Cliquez ici</a>
+
 
       
       
@@ -294,6 +317,7 @@
       <div class="div-lidar">
 
     <div class="div-parente">
+      
         <div class="div-enfant">
           
           <br>
