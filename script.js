@@ -34,4 +34,7 @@ filer.forEach((f) => {
 });
 
 
-
+// Fonction pour remplacer les espaces par des tirets bas
+function remplacerEspaces(input) {
+    input.value = input.value.replace(/ /g, "_");
+}

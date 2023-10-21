@@ -122,6 +122,10 @@
     gap: 10px; /* Espacement entre les colonnes */
   background: #fff !important;
   border-bottom: 1px grey solid;
+  
+      position: -webkit-sticky; /* Pour une compatibilité avec les navigateurs WebKit */
+    position: sticky;
+    top: 0;
 }
 
 /* Style des colonnes */
@@ -221,6 +225,8 @@
     border-radius: 5px;
     font-size: 16px;
     width: 200px;
+        text-transform: lowercase;
+        text-align: center;
 }
 
       
@@ -231,13 +237,9 @@
         <div class="colonneX">Texte Dummy 1</div>
         <div class="colonneX">
           
+    <input type="text" id="mon-champ" class="mon-champ-personnalise" pattern="[a-z_]{1,50}" title="Utilisez des lettres minuscules et _ (tiret bas)" required placeholder="Nommez votre projet" oninput="remplacerEspaces(this)" maxlength="20" autocomplete="off">
+   <script src="script.js"></script>
           
-          
-    <input type="text" id="mon-champ" class="mon-champ-personnalise" pattern="[a-z_]{1,50}" title="Utilisez des lettres minuscules et _ (tiret bas)" required placeholder="dummy">
-
-      
-      
-      
       </div>
         <div class="colonneX2">
       
