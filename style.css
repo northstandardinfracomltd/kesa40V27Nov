@@ -36,10 +36,18 @@ to this section's matching END comment to see page-specific styles.
 
 /* Import fonts */
 @font-face {
+  font-family: neilsonx;
+  src: url("https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Inter-SemiBold.otf?v=1697965258732")
+    format("opentype");
+}
+
+@font-face {
   font-family: HK Grotesk;
   src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
     format("opentype");
 }
+
+
 @font-face {
   font-family: HK Grotesk;
   font-weight: bold;
