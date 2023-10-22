@@ -125,17 +125,18 @@
             font-weight: bold;
             text-align: center;
             color: #fff; /* Couleur du texte */
-                font-family: "senseistandard" !important;
+                font-family: "automaticc" !important;
         }
       
 
       
         /* Style du sous-titre avec une classe */
         .sous-titre-dummy {
-            font-size: 18px;
+            font-size: 16px;
+              letter-spacing: 0px;
             text-align: center;
-            color: #666; /* Couleur du texte */
-              font-family: "sensei" !important;
+            color: #a6a6a6; /* Couleur du texte */
+              font-family: "senseistandard" !important;
         }
       
       
@@ -532,6 +533,15 @@ input:focus, button:focus, textarea:focus {
           margin-left: -11px;
           border: 3px solid #212121;
         }
+      
+              .blinking {
+            animation: blink 0.4s alternate infinite;
+        }
+        @keyframes blink {
+            0% { color: transparent; }
+            100% { color: transparent; }
+        }
+      
     </style>
 </head>
 <body>
@@ -635,7 +645,56 @@ function remplacerEspaces(input) {
 
 
           
-              <h1 class="titre-dummy">Que souhaitez-vous créer</h1>
+               <h1 class="titre-dummy">Qu'allez vous <span id="typed-text">créer</span><span id="exclamation">|</span></h1>
+
+    <script>
+        // Liste des mots à afficher les uns après les autres
+        var words = ["créer", "partager", "publier"];
+        var currentWordIndex = 0;
+        var textElement = document.getElementById("typed-text");
+        var currentCharIndex = 0;
+        var typingSpeed = 100; // Vitesse de dactylographie en millisecondes
+
+        function typeNextWord() {
+            var currentWord = words[currentWordIndex];
+            if (currentCharIndex < currentWord.length) {
+                textElement.textContent += currentWord.charAt(currentCharIndex);
+                currentCharIndex++;
+                setTimeout(typeNextWord, typingSpeed);
+            } else {
+                setTimeout(eraseText, 1000); // Attendre 1 seconde avant d'effacer le texte
+            }
+        }
+
+        function eraseText() {
+            if (textElement.textContent.length > 0) {
+                textElement.textContent = textElement.textContent.slice(0, -1);
+                setTimeout(eraseText, 50); // Vitesse d'effacement plus rapide
+            } else {
+                currentWordIndex = (currentWordIndex + 1) % words.length;
+                currentCharIndex = 0;
+                setTimeout(typeNextWord, 500); // Attendre 0.5 seconde avant de commencer le prochain mot
+            }
+        }
+
+        // Fonction pour faire clignoter le point d'exclamation
+        var exclamationElement = document.getElementById("exclamation");
+        var isYellow = true;
+
+        function blinkExclamation() {
+            if (isYellow) {
+                exclamationElement.classList.add("blinking");
+            } else {
+                exclamationElement.classList.remove("blinking");
+            }
+            isYellow = !isYellow;
+            setTimeout(blinkExclamation, 500); // Changer la couleur toutes les 0.5 seconde
+        }
+
+        // Appeler les fonctions
+        setTimeout(typeNextWord, 1000); // Attendre 1 seconde avant de commencer le typage
+        setTimeout(blinkExclamation, 500); // Démarrer le clignotement après 0.5 seconde
+    </script>
 
               <h2 class="sous-titre-dummy">Quelle catégorie définie le mieux le projet que vous souhaitez</h2>
 <br>
