@@ -49,6 +49,14 @@ to this section's matching END comment to see page-specific styles.
 
 
 @font-face {
+  font-family: saasduoTXTs;
+  font-weight: bold;
+  src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Primary?v=1692806284277")
+    format("opentype");
+}
+
+
+@font-face {
   font-family: HK Grotesk;
   font-weight: bold;
   src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
