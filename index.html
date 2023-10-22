@@ -584,7 +584,7 @@ input:focus, button:focus, textarea:focus {
           
           
 
-    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" autofocus required placeholder="Débutons par nommer votre idée" oninput="verifierChamp()" onfocus="verifierChamp()" maxlength="20" autocomplete="off">
+    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" required placeholder="Débutons par nommer votre idée" oninput="verifierChamp()" onfocus="verifierChamp()" maxlength="20" autocomplete="off">
           <script>
       
       // Fonction pour remplacer les espaces par des tirets bas
@@ -606,12 +606,12 @@ function remplacerEspaces(input) {
             <div class="dot"></div>
         </div>
         <div class="dropdown" id="dropdown">
-            <div class="item">English Version</div>
-            <div class="item">À propos</div>
-                      <div class="item">Zip Références</div>
+            <div class="item">English</div>
+            <div class="item">Késako</div>
+           <div class="item">Références</div>
 
-            <div class="item">Nous contacter</div>
-          <div class="item">Mentions juridiques</div>
+            <div class="item">Contact</div>
+          <div class="item">Mentions</div>
         </div>
     </div>
     <script>
@@ -645,11 +645,11 @@ function remplacerEspaces(input) {
 
 
           
-               <h1 class="titre-dummy">Qu'allez vous <span id="typed-text">créer</span><span id="exclamation">|</span></h1>
+               <h1 class="titre-dummy">Je veux <span id="typed-text"></span><span id="exclamation">|</span></h1>
 
     <script>
         // Liste des mots à afficher les uns après les autres
-        var words = ["créer", "partager", "publier"];
+        var words = ["un catalogue", "des illustrations", "une infographie"];
         var currentWordIndex = 0;
         var textElement = document.getElementById("typed-text");
         var currentCharIndex = 0;
@@ -696,7 +696,7 @@ function remplacerEspaces(input) {
         setTimeout(blinkExclamation, 500); // Démarrer le clignotement après 0.5 seconde
     </script>
 
-              <h2 class="sous-titre-dummy">Quelle catégorie définie le mieux le projet que vous souhaitez</h2>
+              <h2 class="sous-titre-dummy">Indiquez-nous la thématique de votre projet afin de mieux le délimiter. Partagez-nous simplement votre idée, les contenus et notions ; et nous créons de bout-en-bout votre projet personnalisé</h2>
 <br>
           <br>
         <div class="div-structure">
