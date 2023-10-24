@@ -20,6 +20,7 @@
 
         }
       
+
       
       
         /* Style de la div parente */
@@ -652,6 +653,16 @@ input:focus, button:focus, textarea:focus {
             100% { color: transparent; }
         }
       
+      
+             @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(5px); }
+            50% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+            100% { transform: translateX(0); }
+        }
+      
+      
     </style>
 </head>
 <body>
@@ -858,28 +869,40 @@ function remplacerEspaces(input) {
         // Sélectionnez toutes les div-content
         const divs = document.querySelectorAll('.div-content');
 
+        // Sélectionnez le champ
+        const champ = document.getElementById('mon-champ');
+
         // Ajoutez un gestionnaire d'événements de clic à chaque div-content
         divs.forEach((div) => {
             div.addEventListener('click', () => {
-                // Retirez la classe "selected" de toutes les divs
-                divs.forEach((otherDiv) => {
-                    otherDiv.classList.remove('selected');
-                });
+                // Vérifiez si le champ est vide
+                if (champ.value.trim() === '') {
+                    // Champ vide, ajoutez la classe "empty" pour l'animation de tremblement
+                    champ.classList.add('empty');
+                } else {
+                    // Champ non vide, retirez la classe "empty" si elle existe
+                    champ.classList.remove('empty');
 
-                // Retirez la classe "iconeselected" de toutes les icônes
-                const icons = document.querySelectorAll('.icone');
-                icons.forEach((icon) => {
-                    icon.classList.remove('iconeselected');
-                });
+                    // Retirez la classe "selected" de toutes les divs
+                    divs.forEach((otherDiv) => {
+                        otherDiv.classList.remove('selected');
+                    });
 
-                // Ajoutez la classe "selected" à la div cliquée
-                div.classList.add('selected');
+                    // Retirez la classe "iconeselected" de toutes les icônes
+                    const icons = document.querySelectorAll('.icone');
+                    icons.forEach((icon) => {
+                        icon.classList.remove('iconeselected');
+                    });
 
-                // Trouvez l'icône à l'intérieur de la div cliquée
-                const icon = div.querySelector('.icone');
+                    // Ajoutez la classe "selected" à la div cliquée
+                    div.classList.add('selected');
 
-                // Ajoutez la classe "iconeselected" à l'icône
-                icon.classList.add('iconeselected');
+                    // Trouvez l'icône à l'intérieur de la div cliquée
+                    const icon = div.querySelector('.icone');
+
+                    // Ajoutez la classe "iconeselected" à l'icône
+                    icon.classList.add('iconeselected');
+                }
             });
         });
     </script>

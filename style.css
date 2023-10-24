@@ -82,6 +82,16 @@ to this section's matching END comment to see page-specific styles.
   white-space: nowrap;
   margin-left: auto;
 }
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+
 .btn--remix img {
   margin-right: 0.5rem;
 }
