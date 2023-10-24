@@ -860,11 +860,12 @@ function remplacerEspaces(input) {
                     otherDiv.classList.remove('selected');
                 });
 
-                    // Retirez la classe "selected" de toutes les divs
-                divs.forEach((otherDiv) => {
-                    otherDiv.classList.remove('iconeselected');
+                // Retirez la classe "iconeselected" de toutes les icônes
+                const icons = document.querySelectorAll('.icone');
+                icons.forEach((icon) => {
+                    icon.classList.remove('iconeselected');
                 });
-              
+
                 // Ajoutez la classe "selected" à la div cliquée
                 div.classList.add('selected');
 
@@ -874,11 +875,8 @@ function remplacerEspaces(input) {
                 // Ajoutez la classe "iconeselected" à l'icône
                 icon.classList.add('iconeselected');
             });
-          
-          
         });
     </script>
-          
 
           
               <a href="#" class="lien-violet">Lancer la production</a>
