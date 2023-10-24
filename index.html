@@ -172,6 +172,14 @@
         .icone {
             display: block;
             margin: 0 auto; /* Centre l'icône horizontalement */
+           opacity: 0.1;
+        }
+      
+      
+              .iconeselected {
+                opacity: 1;
+            display: block;
+            margin: 0 auto; /* Centre l'icône horizontalement */
         }
 
         /* Style du titre */
@@ -801,7 +809,7 @@ function remplacerEspaces(input) {
           <br>
         <div class="div-structure">
         <div class="div-content">
-        <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/dummy%20(1).svg?v=1698090779234" alt="Icône">
+        <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/ddedededeienivez.svg?v=1698087765263" alt="Icône">
         <p class="titrex">Documentation</p>
         </div>
         <div class="div-content">
@@ -839,6 +847,7 @@ function remplacerEspaces(input) {
                
     </div>
 
+
     <script>
         // Sélectionnez toutes les div-content
         const divs = document.querySelectorAll('.div-content');
@@ -851,11 +860,26 @@ function remplacerEspaces(input) {
                     otherDiv.classList.remove('selected');
                 });
 
+                    // Retirez la classe "selected" de toutes les divs
+                divs.forEach((otherDiv) => {
+                    otherDiv.classList.remove('iconeselected');
+                });
+              
                 // Ajoutez la classe "selected" à la div cliquée
                 div.classList.add('selected');
+
+                // Trouvez l'icône à l'intérieur de la div cliquée
+                const icon = div.querySelector('.icone');
+
+                // Ajoutez la classe "iconeselected" à l'icône
+                icon.classList.add('iconeselected');
             });
+          
+          
         });
     </script>
+          
+
           
               <a href="#" class="lien-violet">Lancer la production</a>
        
