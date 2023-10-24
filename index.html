@@ -707,19 +707,60 @@ input:focus, button:focus, textarea:focus {
           
           
           
+     <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" required placeholder="Je veux " maxlength="20" autocomplete="off">
+    
+    <script>
+        var words = ["un catalogue", "des illustrations", "une brochure", "une infographie", "une plaquette", "un flyer"];
+        var currentWordIndex = 0;
+        var textElement = document.getElementById("mon-champ");
+        var currentCharIndex = 0;
+        var typingSpeed = 100; // Vitesse de dactylographie en millisecondes
+        var exclamationElement = document.getElementById("exclamation");
 
-    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" required placeholder="Débutons par nommer votre idée" oninput="verifierChamp()" onfocus="verifierChamp()" maxlength="20" autocomplete="off">
-          <script>
-      
-      // Fonction pour remplacer les espaces par des tirets bas
-function remplacerEspaces(input) {
-    input.value = input.value.replace(/ /g, "_");
-}
+        function typeNextWord() {
+            var currentWord = words[currentWordIndex];
+            if (currentCharIndex < currentWord.length) {
+                textElement.setAttribute("placeholder", "Je veux " + textElement.getAttribute("placeholder") + currentWord.charAt(currentCharIndex));
+                currentCharIndex++;
+                setTimeout(typeNextWord, typingSpeed);
+            } else {
+                setTimeout(eraseText, 1000); // Attendre 1 seconde avant d'effacer le texte
+            }
+        }
 
-      
+        function eraseText() {
+            var placeholderText = textElement.getAttribute("placeholder");
+            if (placeholderText.length > 6) { // 6 est la longueur de "Je veux "
+                placeholderText = placeholderText.slice(0, -1);
+                textElement.setAttribute("placeholder", placeholderText);
+                setTimeout(eraseText, 50); // Vitesse d'effacement plus rapide
+            } else {
+                currentWordIndex = (currentWordIndex + 1) % words.length;
+                currentCharIndex = 0;
+                setTimeout(typeNextWord, 500); // Attendre 0.5 seconde avant de commencer le prochain mot
+            }
+        }
 
+        function blinkExclamation() {
+            if (exclamationElement.style.display === "none") {
+                exclamationElement.style.display = "inline";
+            } else {
+                exclamationElement.style.display = "none";
+            }
+            setTimeout(blinkExclamation, 500); // Changer la visibilité toutes les 0.5 secondes
+        }
+
+        // Appeler les fonctions
+        exclamationElement.style.display = "none"; // Masquer le point d'exclamation au début
+        setTimeout(typeNextWord, 1000); // Attendre 1 seconde avant de commencer le typage
+        setTimeout(blinkExclamation, 500); // Démarrer le clignotement après 0.5 seconde
     </script>
           
+          
+          
+          
+          
+
       </div>
         <div class="colonneX2">
       
@@ -767,58 +808,6 @@ function remplacerEspaces(input) {
 
 
 
-
-          
-               <h1 class="titre-dummy">Je veux <span id="typed-text"></span><span id="exclamation">|</span></h1>
-
-    <script>
-        // Liste des mots à afficher les uns après les autres
-        var words = ["un catalogue", "des illustrations", "une brochure", "une infographie", "une plaquette", "un flyer"];
-        var currentWordIndex = 0;
-        var textElement = document.getElementById("typed-text");
-        var currentCharIndex = 0;
-        var typingSpeed = 100; // Vitesse de dactylographie en millisecondes
-
-        function typeNextWord() {
-            var currentWord = words[currentWordIndex];
-            if (currentCharIndex < currentWord.length) {
-                textElement.textContent += currentWord.charAt(currentCharIndex);
-                currentCharIndex++;
-                setTimeout(typeNextWord, typingSpeed);
-            } else {
-                setTimeout(eraseText, 1000); // Attendre 1 seconde avant d'effacer le texte
-            }
-        }
-
-        function eraseText() {
-            if (textElement.textContent.length > 0) {
-                textElement.textContent = textElement.textContent.slice(0, -1);
-                setTimeout(eraseText, 50); // Vitesse d'effacement plus rapide
-            } else {
-                currentWordIndex = (currentWordIndex + 1) % words.length;
-                currentCharIndex = 0;
-                setTimeout(typeNextWord, 500); // Attendre 0.5 seconde avant de commencer le prochain mot
-            }
-        }
-
-        // Fonction pour faire clignoter le point d'exclamation
-        var exclamationElement = document.getElementById("exclamation");
-        var isYellow = true;
-
-        function blinkExclamation() {
-            if (isYellow) {
-                exclamationElement.classList.add("blinking");
-            } else {
-                exclamationElement.classList.remove("blinking");
-            }
-            isYellow = !isYellow;
-            setTimeout(blinkExclamation, 500); // Changer la couleur toutes les 0.5 seconde
-        }
-
-        // Appeler les fonctions
-        setTimeout(typeNextWord, 1000); // Attendre 1 seconde avant de commencer le typage
-        setTimeout(blinkExclamation, 500); // Démarrer le clignotement après 0.5 seconde
-    </script>
 
               <h2 class="sous-titre-dummy">Sélectionnez la catégorie ainsi que la thémtique </h2>
 <br>
