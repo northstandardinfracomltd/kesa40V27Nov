@@ -652,7 +652,18 @@ input:focus, button:focus, textarea:focus {
         }
       
 
-      
+  .shake {
+    animation: shake 0.5s;
+  }
+
+  @keyframes shake {
+    0% { transform: translate(0); }
+    20% { transform: translate(-5px, 0); }
+    40% { transform: translate(5px, 0); }
+    60% { transform: translate(-5px, 0); }
+    80% { transform: translate(5px, 0); }
+    100% { transform: translate(0); }
+  }
       
     </style>
 </head>
@@ -793,7 +804,7 @@ input:focus, button:focus, textarea:focus {
 
 
 
-              <h2 class="sous-titre-dummy">Sélectionnez la catégorie ainsi que la thémtique </h2>
+              <h2 class="sous-titre-dummy">Après avoir ajouté un titre — Sélectionnez une catégorie</h2>
 <br>
           <br>
         <div class="div-structure">
@@ -879,8 +890,24 @@ input:focus, button:focus, textarea:focus {
         });
     </script>
 
-          
-              <a href="#" class="lien-violet">Lancer la production</a>
+  <a href="#" class="lien-violet" id="btn">Lancer la production</a>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", function(event) {
+      var inputField = document.getElementById("mon-champ");
+
+      if (inputField.value.trim() === "") {
+        event.preventDefault(); // Empêche la soumission du formulaire
+        var btn = document.getElementById("btn");
+        btn.classList.add("shake");
+
+        // Supprimer la classe "shake" après l'animation (0.5s dans cet exemple)
+        setTimeout(function() {
+          btn.classList.remove("shake");
+        }, 500);
+      }
+    });
+  </script>
        
                  
 
