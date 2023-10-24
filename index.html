@@ -644,24 +644,11 @@ input:focus, button:focus, textarea:focus {
           display: none !important;
         }
       
-              .blinking {
-            animation: blink 0.4s alternate infinite;
-        }
-
         .blinking::after {
             content: "|";
             display: inline-block;
             vertical-align: middle;
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
+            color: red; /* Couleur initiale (rouge) */
         }
       
 
@@ -711,19 +698,21 @@ input:focus, button:focus, textarea:focus {
         <div class="colonneX3">
           
           
-    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" required placeholder="Je veux" maxlength="20" autocomplete="off">
+    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" required placeholder="Je veux |" maxlength="20" autocomplete="off">
     
     <script>
-        var words = [" un catalogue", " des illustrations", " une brochure", " une infographie", " une plaquette", " un flyer"];
+        var words = [" Catalogue Magasin", " des illustrations", " une brochure", " une infographie", " une plaquette", " un flyer"];
         var currentWordIndex = 0;
         var textElement = document.getElementById("mon-champ");
         var currentCharIndex = 0;
         var typingSpeed = 100; // Vitesse de dactylographie en millisecondes
+        var blinkingBar = document.querySelector(".blinking::after");
+        var isRed = true;
 
         function typeNextWord() {
             var currentWord = words[currentWordIndex];
             if (currentCharIndex < currentWord.length) {
-                textElement.setAttribute("placeholder", "Je veux" + currentWord.substring(0, currentCharIndex + 1));
+                textElement.setAttribute("placeholder", "Entrez un titre comme" + currentWord.substring(0, currentCharIndex + 1) + "|");
                 currentCharIndex++;
                 setTimeout(typeNextWord, typingSpeed);
             } else {
@@ -733,7 +722,7 @@ input:focus, button:focus, textarea:focus {
 
         function eraseText() {
             var placeholderText = textElement.getAttribute("placeholder");
-            if (placeholderText.endsWith(" |")) {
+            if (placeholderText.endsWith("|")) {
                 placeholderText = placeholderText.slice(0, -2);
                 textElement.setAttribute("placeholder", placeholderText);
                 currentWordIndex = (currentWordIndex + 1) % words.length;
@@ -742,18 +731,18 @@ input:focus, button:focus, textarea:focus {
             } else {
                 if (placeholderText.length > 6) { // 6 est la longueur de "Je veux"
                     placeholderText = placeholderText.slice(0, -1);
-                    textElement.setAttribute("placeholder", placeholderText + " |");
+                    textElement.setAttribute("placeholder", placeholderText + "|");
+                    toggleColor(); // Appeler la fonction pour changer la couleur
                     setTimeout(eraseText, 50); // Vitesse d'effacement plus rapide
                 }
             }
         }
 
+
         // Appeler les fonctions
         setTimeout(typeNextWord, 1000); // Attendre 1 seconde avant de commencer le typage
     </script>
           
-          
-
           
 
       </div>
