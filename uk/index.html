@@ -311,7 +311,6 @@
 }
 
 .item {
-    display: block;
     padding: 10px 9px 12px 10px;
     text-align: center;
     cursor: pointer;
@@ -319,26 +318,14 @@
   font-size: 16px !important;
   letter-spacing: 0px !important;
   border-radius: 12px;
-  background: rgb(255, 108, 55);
-        color: #fff;
-        box-shadow: 0 0 0px 4px #008eff38;
-    cursor: pointer;
-  text-decoration: none;
-  margin-top: 5px;
 }
 
-      .itemBBB {
-  margin-top: 0px;
-}
       
       .item:hover {
 background: rgb(255, 108, 55);
         color: #fff;
         box-shadow: 0 0 0px 4px #008eff38;
     cursor: pointer;
-          text-decoration: none;
-         
-
 }
       
       
@@ -795,13 +782,14 @@ input:focus, button:focus, textarea:focus {
             <div class="dot"></div>
             <div class="dot"></div>
         </div>
-    <div class="dropdown" id="dropdown">
-        <a class="item" href="/uk">English</a>
-        <a class="item" href="/uk">Késako</a>
-        <a class="item" href="/uk">Références</a>
-        <a class="item" href="/uk">Contact</a>
-        <a class="item" href="/uk">Mentions</a>
-    </div>
+        <div class="dropdown" id="dropdown">
+            <div class="item">English</div>
+            <div class="item">Késako</div>
+           <div class="item">Références</div>
+
+            <div class="item">Contact</div>
+          <div class="item">Mentions</div>
+        </div>
     </div>
     <script>
         // JavaScript pour gérer le clic sur l'icône
