@@ -647,19 +647,24 @@ input:focus, button:focus, textarea:focus {
               .blinking {
             animation: blink 0.4s alternate infinite;
         }
+
+        .blinking::after {
+            content: "|";
+            display: inline-block;
+            vertical-align: middle;
+            animation: blink 1s step-end infinite;
+        }
+
         @keyframes blink {
-            0% { color: transparent; }
-            100% { color: transparent; }
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
         }
       
-      
-             @keyframes shake {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(5px); }
-            50% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-            100% { transform: translateX(0); }
-        }
+
       
       
     </style>
@@ -706,21 +711,19 @@ input:focus, button:focus, textarea:focus {
         <div class="colonneX3">
           
           
-          
-     <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" required placeholder="Je veux " maxlength="20" autocomplete="off">
+    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" required placeholder="Je veux" maxlength="20" autocomplete="off">
     
     <script>
-        var words = ["un catalogue", "des illustrations", "une brochure", "une infographie", "une plaquette", "un flyer"];
+        var words = [" un catalogue", " des illustrations", " une brochure", " une infographie", " une plaquette", " un flyer"];
         var currentWordIndex = 0;
         var textElement = document.getElementById("mon-champ");
         var currentCharIndex = 0;
         var typingSpeed = 100; // Vitesse de dactylographie en millisecondes
-        var exclamationElement = document.getElementById("exclamation");
 
         function typeNextWord() {
             var currentWord = words[currentWordIndex];
             if (currentCharIndex < currentWord.length) {
-                textElement.setAttribute("placeholder", "Je veux " + textElement.getAttribute("placeholder") + currentWord.charAt(currentCharIndex));
+                textElement.setAttribute("placeholder", "Je veux" + currentWord.substring(0, currentCharIndex + 1));
                 currentCharIndex++;
                 setTimeout(typeNextWord, typingSpeed);
             } else {
@@ -730,35 +733,27 @@ input:focus, button:focus, textarea:focus {
 
         function eraseText() {
             var placeholderText = textElement.getAttribute("placeholder");
-            if (placeholderText.length > 6) { // 6 est la longueur de "Je veux "
-                placeholderText = placeholderText.slice(0, -1);
+            if (placeholderText.endsWith(" |")) {
+                placeholderText = placeholderText.slice(0, -2);
                 textElement.setAttribute("placeholder", placeholderText);
-                setTimeout(eraseText, 50); // Vitesse d'effacement plus rapide
-            } else {
                 currentWordIndex = (currentWordIndex + 1) % words.length;
                 currentCharIndex = 0;
                 setTimeout(typeNextWord, 500); // Attendre 0.5 seconde avant de commencer le prochain mot
-            }
-        }
-
-        function blinkExclamation() {
-            if (exclamationElement.style.display === "none") {
-                exclamationElement.style.display = "inline";
             } else {
-                exclamationElement.style.display = "none";
+                if (placeholderText.length > 6) { // 6 est la longueur de "Je veux"
+                    placeholderText = placeholderText.slice(0, -1);
+                    textElement.setAttribute("placeholder", placeholderText + " |");
+                    setTimeout(eraseText, 50); // Vitesse d'effacement plus rapide
+                }
             }
-            setTimeout(blinkExclamation, 500); // Changer la visibilité toutes les 0.5 secondes
         }
 
         // Appeler les fonctions
-        exclamationElement.style.display = "none"; // Masquer le point d'exclamation au début
         setTimeout(typeNextWord, 1000); // Attendre 1 seconde avant de commencer le typage
-        setTimeout(blinkExclamation, 500); // Démarrer le clignotement après 0.5 seconde
     </script>
           
           
-          
-          
+
           
 
       </div>
