@@ -1277,6 +1277,20 @@ input:focus, button:focus, textarea:focus {
     transform: scale(1.05);
     transition-duration: 0.2s;
 }
+      
+      
+      .laslowbutton  {
+    background-color: #212121 !important;
+        border: 1px solid #212121 !important;
+        padding-left: 0px !important;
+    color: rgb(62, 146, 242)  !important;
+    text-align: center  !important;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px  !important;
+    font-size: 16px !important;
+    text-decoration: none  !important;
+        cursor: pointer !important;
+}
        
       .profile-pic1,
       .sendername1,
@@ -1298,6 +1312,8 @@ input:focus, button:focus, textarea:focus {
     </style>
   
   
+  <br>  <br>  <br>
+  
     <div class="chat-container">
       
 
@@ -1310,21 +1326,21 @@ input:focus, button:focus, textarea:focus {
             <div  class="messaget2 messageeffect">
                 <p class="sendername">Hapiness Designer</p>
                 <div class="message-bubble1">
-                    Bonjour ! Comment ça va ?
+                    Puis-je vous partager des renseignements?
                 </div>
               
                             <!-- Bouton pour commencer l'apparition des divs -->
-        <button id="startButton" class="laslowbutton">Démarrer la conversation</button>
+        <button id="startButton" class="laslowbutton">En savoir plus sur Kesako</button>
 
               
                 <div id="showdiv2" class="message-bubble2">
-                    Bonjour ! Comment ça va ?
+                    Tout d'abord, bonjour et bienvenue sur Kesako
                 </div>
             </div>
         </div>
         <div class="message receiver-message">
             <div id="showdiv3" class="message-bubble3 messageeffect">
-                Comment se déroule un projet avec Kesako en bref? 
+                Comment se déroule un projet avec Kesako? 
             </div>
         </div>
         <div class="message sender-message">
@@ -1332,14 +1348,14 @@ input:focus, button:focus, textarea:focus {
             <div class="messaget2 messageeffect">
                 <p id="showdiv32" class="sendername1">Hapiness Designer</p>
                 <div id="showdiv4" class="message-bubble4">
-                    Bonjour ! Comment ça va ?
+                    Envoyez-nous simplement vos idées, requêtes, critères et contenus en vrac ; Kesako créée de bout-en-bout.
                 </div>
                 <div id="showdiv5" class="message-bubble5">
-                    Bonjour ! Comment ça va ?
+                    Toutes nos réalisations sont personnalisées et exclusifs à chaque demande.
                 </div>
               
               <div id="showdiv6" class="message-bubble6">
-                    Bonjour ! Comment ça va ?
+                  Nous serons amenés à créer des illustrations, choisir des polices et rédiger des textes par exemple, tout en suivant votre ligne éditoriale.
                 </div>
             </div>
         </div>
@@ -1369,7 +1385,7 @@ input:focus, button:focus, textarea:focus {
 
     </div>
  
-
+  <br>  <br>
     <script>
         const divIds = [
             'showdiv2', 'showdiv3', 'showdiv31', 'showdiv32',
@@ -1386,7 +1402,7 @@ input:focus, button:focus, textarea:focus {
                 if (currentDiv) {
                     currentDiv.style.display = 'block';
                     currentIndex++;
-                    setTimeout(showNextDiv, 600); // Délai de 1,5 secondes (1500 ms)
+                    setTimeout(showNextDiv, 400); // Délai de 1,5 secondes (1500 ms)
                 }
             }
         }
@@ -1402,7 +1418,7 @@ input:focus, button:focus, textarea:focus {
   
   
       <footer>
-        <p>Kesako Français — SMBs and Industry Contents Platform</p>
+        <p>Kesako Français — SMBs and Industry Contents Platform — North Standard Infracom Ltd</p>
     </footer>
   
   
