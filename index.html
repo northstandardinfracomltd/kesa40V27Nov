@@ -1074,43 +1074,100 @@ input:focus, button:focus, textarea:focus {
     transform: scale(1.05);
     transition-duration: 0.2s;
 }
-      
+              .message-bubble1,
+        .message-bubble2,
+        .message-bubble3,
+        .message-bubble4,
+        .message-bubble5 {
+            display: none;
+        }
       
     </style>
-
+  
+  
     <div class="chat-container">
         <div class="message sender-message">
             <img class="profile-pic" src="expediteur.jpg" alt="Expéditeur">
-                    <div class="messaget2 messageeffect">
-<p class="sendername">Hapiness Designer</p>
-            <div class="message-bubble1 showdiv1">
-                Bonjour ! Comment ça va ?
+            <div  class="messaget2 messageeffect">
+                <p class="sendername">Hapiness Designer</p>
+                <div id="showdiv1" class="message-bubble1">
+                    Bonjour ! Comment ça va ?
+                </div>
+                <div id="showdiv2" class="message-bubble2">
+                    Bonjour ! Comment ça va ?
+                </div>
             </div>
-         
-          <div class="message-bubble2 showdiv2">
-                Bonjour ! Comment ça va ?
-            </div> </div>
-          
-          
         </div>
         <div class="message receiver-message">
-            <div class="message-bubble3 messageeffect showdiv3">
-               Notre entreprise a besoin de créer un catalogue (PDF) pour ses produits. Pourquoi opter pour Kesako?
+            <div id="showdiv3" class="message-bubble3 messageeffect">
+                Notre entreprise a besoin de créer un catalogue (PDF) pour ses produits. Comment ça fonctionne?
             </div>
         </div>
         <div class="message sender-message">
             <img class="profile-pic" src="expediteur.jpg" alt="Expéditeur">
-                          <div class="messaget2 messageeffect">
-<p class="sendername">Hapiness Designer</p>
-            <div class="message-bubble1 showdiv4">
-                Bonjour ! Comment ça va ?
+            <div class="messaget2 messageeffect">
+                <p class="sendername">Hapiness Designer</p>
+                <div id="showdiv4" class="message-bubble4">
+                    Bonjour ! Comment ça va ?
+                </div>
+                <div id="showdiv5" class="message-bubble5">
+                    Bonjour ! Comment ça va ?
+                </div>
+              
+              <div  class="message-bubble6">
+                    Bonjour ! Comment ça va ?
+                </div>
             </div>
-         
-          <div id="showdiv5" class="message-bubble2">
-                Bonjour ! Comment ça va ?
-            </div> </div>
+        </div>
+      
+       <div class="message receiver-message">
+            <div id="showdiv3" class="message-bubble7 messageeffect">
+                D'accord c'est génial. Pourquoi opter pour Kesako?
+            </div>
+        </div>
+      
+        <div class="message sender-message">
+            <img class="profile-pic" src="expediteur.jpg" alt="Expéditeur">
+            <div class="messaget2 messageeffect">
+                <p class="sendername">Hapiness Designer</p>
+                <div id="showdiv4" class="message-bubble8">
+                    Bonjour ! Comment ça va ?
+                </div>
+                <div id="showdiv5" class="message-bubble9">
+                    Bonjour ! Comment ça va ?
+                </div>
+              
+              <div  class="message-bubble10">
+                    Bonjour ! Comment ça va ?
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Fonction pour faire apparaître les div avec un délai de 1,5 secondes
+        function showDivsWithDelay() {
+            const divIds = ['showdiv1', 'showdiv2', 'showdiv3', 'showdiv4', 'showdiv5', 'showdiv6'];
+            let currentIndex = 0;
+
+            function showNextDiv() {
+                if (currentIndex < divIds.length) {
+                    const currentDivId = divIds[currentIndex];
+                    const currentDiv = document.getElementById(currentDivId);
+                    if (currentDiv) {
+                        currentDiv.style.display = 'block';
+                        currentIndex++;
+                        setTimeout(showNextDiv, 1500); // Délai de 1,5 secondes (1500 ms)
+                    }
+                }
+            }
+
+            showNextDiv();
+        }
+
+        // Appeler la fonction lorsque la page est chargée
+        window.addEventListener('load', showDivsWithDelay);
+    </script>
 
 
   
@@ -1118,7 +1175,6 @@ input:focus, button:focus, textarea:focus {
   
           <div class="div-structurebis">
         <div class="div-contentbis">
-        <img class="iconebis" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz.svg?v=1698163862117" alt="Icône">
         <p class="titrexbis">Infographie</p>
         </div>
                
