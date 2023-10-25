@@ -976,13 +976,7 @@ input:focus, button:focus, textarea:focus {
          </div>
   
   
-  
-  
-  <div class="grid-container">
-          <img class="imageray" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/domains-happy-chat-1.png?v=1697904052263" >
 
-  </div>
-  
   
   
   
@@ -1001,16 +995,18 @@ input:focus, button:focus, textarea:focus {
       
         .messaget2 {
             display: block;
-
+ cursor: default;
       }
 
         .sender-message {
             flex-direction: row;
             width: 100%; 
+           cursor: default;
         }
 
         .receiver-message {
             flex-direction: row-reverse;
+           cursor: default;
         }
 
         .profile-pic {
@@ -1018,6 +1014,7 @@ input:focus, button:focus, textarea:focus {
             height: 40px;
             border-radius: 50%;
             margin-right: 10px;
+           cursor: default;
         }
 
         .message-bubble {
@@ -1025,7 +1022,7 @@ input:focus, button:focus, textarea:focus {
             padding: 10px;
             border-radius: 10px;
             max-width: 70%;
-         
+          cursor: default;
         }
       
       .message-bubble1 {
@@ -1034,7 +1031,7 @@ input:focus, button:focus, textarea:focus {
             border-radius: 20px 20px 20px 0px;
       
         margin-bottom: 5px;
-     
+      cursor: default;
                  width: 70% !important;
         }
       
@@ -1044,7 +1041,7 @@ input:focus, button:focus, textarea:focus {
             border-radius: 0px 20px 20px 20px;
             
         margin-top: 5px;
-           
+            cursor: default;
         width: 80% !important;
          
         }
@@ -1052,40 +1049,66 @@ input:focus, button:focus, textarea:focus {
          .message-bubble3 {
             background-color: #DCF8C6;
             padding: 10px;
-            border-radius: 0px 20px 20px 20px;
+            border-radius: 20px 20px 0px 20px;
             
         margin-top: 5px;
+            cursor: default;
            
         width: 80% !important;
          
         }
+      
+          .sendername {
+                  color: #a6a6a6; /* Couleur du texte */
+            text-align: left; /* Alignement du texte au centre */
+               font-family: "senseistandard" !important;
+              letter-spacing: 0px;
+              font-size: 16px;
+              font-weight: 500 !important;
+            cursor: default;
+        }
+      
+      
+      
+          .messageeffect:hover {
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+}
+      
+      
     </style>
 
     <div class="chat-container">
         <div class="message sender-message">
             <img class="profile-pic" src="expediteur.jpg" alt="Expéditeur">
-                    <div class="messaget2">
-
-            <div class="message-bubble1">
+                    <div class="messaget2 messageeffect">
+<p class="sendername">Hapiness Designer</p>
+            <div class="message-bubble1 showdiv1">
                 Bonjour ! Comment ça va ?
             </div>
          
-          <div class="message-bubble2">
+          <div class="message-bubble2 showdiv2">
                 Bonjour ! Comment ça va ?
             </div> </div>
           
           
         </div>
         <div class="message receiver-message">
-            <div class="message-bubble">
-                Salut ! Ça va bien, merci. Et toi ?
+            <div class="message-bubble3 messageeffect showdiv3">
+               Notre entreprise a besoin de créer un catalogue (PDF) pour ses produits. Pourquoi opter pour Kesako?
             </div>
         </div>
         <div class="message sender-message">
             <img class="profile-pic" src="expediteur.jpg" alt="Expéditeur">
-            <div class="message-bubble">
-                Je vais bien aussi, merci !
+                          <div class="messaget2 messageeffect">
+<p class="sendername">Hapiness Designer</p>
+            <div class="message-bubble1 showdiv4">
+                Bonjour ! Comment ça va ?
             </div>
+         
+          <div id="showdiv5" class="message-bubble2">
+                Bonjour ! Comment ça va ?
+            </div> </div>
         </div>
     </div>
 
