@@ -984,6 +984,115 @@ input:focus, button:focus, textarea:focus {
   </div>
   
   
+  
+  
+
+    <style>
+        .chat-container {
+            width: 400px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        .message {
+            display: flex;
+            margin: 10px;
+        }
+      
+        .messaget2 {
+            display: block;
+
+      }
+
+        .sender-message {
+            flex-direction: row;
+            width: 100%; 
+        }
+
+        .receiver-message {
+            flex-direction: row-reverse;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .message-bubble {
+            background-color: #DCF8C6;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 70%;
+         
+        }
+      
+      .message-bubble1 {
+            background-color: #DCF8C6;
+            padding: 10px;
+            border-radius: 20px 20px 20px 0px;
+      
+        margin-bottom: 5px;
+     
+                 width: 70% !important;
+        }
+      
+      .message-bubble2 {
+            background-color: #DCF8C6;
+            padding: 10px;
+            border-radius: 0px 20px 20px 20px;
+            
+        margin-top: 5px;
+           
+        width: 80% !important;
+         
+        }
+      
+         .message-bubble3 {
+            background-color: #DCF8C6;
+            padding: 10px;
+            border-radius: 0px 20px 20px 20px;
+            
+        margin-top: 5px;
+           
+        width: 80% !important;
+         
+        }
+    </style>
+
+    <div class="chat-container">
+        <div class="message sender-message">
+            <img class="profile-pic" src="expediteur.jpg" alt="Expéditeur">
+                    <div class="messaget2">
+
+            <div class="message-bubble1">
+                Bonjour ! Comment ça va ?
+            </div>
+         
+          <div class="message-bubble2">
+                Bonjour ! Comment ça va ?
+            </div> </div>
+          
+          
+        </div>
+        <div class="message receiver-message">
+            <div class="message-bubble">
+                Salut ! Ça va bien, merci. Et toi ?
+            </div>
+        </div>
+        <div class="message sender-message">
+            <img class="profile-pic" src="expediteur.jpg" alt="Expéditeur">
+            <div class="message-bubble">
+                Je vais bien aussi, merci !
+            </div>
+        </div>
+    </div>
+
+
+  
+  
+  
           <div class="div-structurebis">
         <div class="div-contentbis">
         <img class="iconebis" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz.svg?v=1698163862117" alt="Icône">
