@@ -1277,7 +1277,7 @@ input:focus, button:focus, textarea:focus {
     transform: scale(1.05);
     transition-duration: 0.2s;
 }
-        .message-bubble1,
+       
       .profile-pic1,
       .sendername1,
        .profile-pic2,
@@ -1299,14 +1299,24 @@ input:focus, button:focus, textarea:focus {
   
   
     <div class="chat-container">
+      
+
+      
+      
+      
         <div class="message sender-message">
         
             <img class="profile-pic" src="expediteur.jpg" alt="Expéditeur">
             <div  class="messaget2 messageeffect">
                 <p class="sendername">Hapiness Designer</p>
-                <div id="showdiv1" class="message-bubble1">
+                <div class="message-bubble1">
                     Bonjour ! Comment ça va ?
                 </div>
+              
+                            <!-- Bouton pour commencer l'apparition des divs -->
+        <button id="startButton" class="laslowbutton">Démarrer la conversation</button>
+
+              
                 <div id="showdiv2" class="message-bubble2">
                     Bonjour ! Comment ça va ?
                 </div>
@@ -1314,7 +1324,7 @@ input:focus, button:focus, textarea:focus {
         </div>
         <div class="message receiver-message">
             <div id="showdiv3" class="message-bubble3 messageeffect">
-                Notre entreprise a besoin de créer un catalogue (PDF) pour ses produits. Comment ça fonctionne?
+                Comment se déroule un projet avec Kesako en bref? 
             </div>
         </div>
         <div class="message sender-message">
@@ -1336,7 +1346,7 @@ input:focus, button:focus, textarea:focus {
       
        <div class="message receiver-message">
             <div id="showdiv7" class="message-bubble7 messageeffect">
-                D'accord c'est génial. Pourquoi opter pour Kesako?
+                Pourquoi opter pour Kesako?
             </div>
         </div>
       
@@ -1356,20 +1366,19 @@ input:focus, button:focus, textarea:focus {
                 </div>
             </div>
         </div>
-           <!-- Bouton "Continuer la conversation" -->
-        <button id="continueButton" style="display: none;">Continuer la conversation</button>
-   
+
     </div>
- <script>
-        // Tableau des IDs, y compris "continueButton"
+ 
+
+    <script>
         const divIds = [
-            'showdiv1', 'showdiv2', 'showdiv3', 'showdiv31', 'showdiv32', 'showdiv4', 'showdiv5',
-            'showdiv6', 'showdiv7', 'showdiv71', 'showdiv72', 'showdiv8', 'showdiv9', 'showdiv10', 'continueButton'
+            'showdiv2', 'showdiv3', 'showdiv31', 'showdiv32',
+            'showdiv4', 'showdiv5', 'showdiv6', 'showdiv7', 'showdiv71',
+            'showdiv72', 'showdiv8', 'showdiv9', 'showdiv10'
         ];
 
         let currentIndex = 0;
 
-        // Fonction pour faire apparaître le prochain div
         function showNextDiv() {
             if (currentIndex < divIds.length) {
                 const currentDivId = divIds[currentIndex];
@@ -1377,24 +1386,17 @@ input:focus, button:focus, textarea:focus {
                 if (currentDiv) {
                     currentDiv.style.display = 'block';
                     currentIndex++;
-
-                    // Si on atteint le bouton "Continuer la conversation", ajoute un gestionnaire de clic
-                    if (currentDivId === 'continueButton') {
-                        const continueButton = document.getElementById('continueButton');
-                        if (continueButton) {
-                            continueButton.addEventListener('click', showNextDiv);
-                        }
-                    } else {
-                        setTimeout(showNextDiv, 1500); // Délai de 1,5 secondes (1500 ms)
-                    }
+                    setTimeout(showNextDiv, 600); // Délai de 1,5 secondes (1500 ms)
                 }
             }
         }
 
-        // Appeler la fonction lorsque la page est chargée
-        window.addEventListener('load', showNextDiv);
+        // Écouteur d'événement pour démarrer l'apparition des divs
+        document.getElementById('startButton').addEventListener('click', function() {
+            this.style.display = 'none'; // Masque le bouton de démarrage
+            showNextDiv(); // Commence l'apparition des divs
+        });
     </script>
-  
   
 
   
