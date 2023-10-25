@@ -73,7 +73,7 @@
 
         .div-content {
             background-color: #262626;
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 20px;
             text-align: center;
             cursor: pointer; /* Change le curseur au survol */
@@ -695,6 +695,26 @@ input:focus, button:focus, textarea:focus {
     100% { transform: translate(0); }
   }
       
+      
+      
+                    .div-structurebis {
+            margin-left: auto;
+                      margin-right: auto;
+                      max-width: 700px !important;
+        }
+
+        .div-contentbis {
+            background-color: #262626;
+            border-radius: 12px 12px 0px 0px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer; /* Change le curseur au survol */
+        }
+      
+      
+      
+      
+      
     </style>
 </head>
 <body>
@@ -833,7 +853,7 @@ input:focus, button:focus, textarea:focus {
 
 
 
-              <h2 class="sous-titre-dummy">Ensuite, sélectionnez une catégorie</h2>
+              <h2 class="sous-titre-dummy">Ensuite, sélectionnez une catégorie ou format</h2>
 <br>
           <br>
         <div class="div-structure">
@@ -877,49 +897,55 @@ input:focus, button:focus, textarea:focus {
     </div>
 
 
-    <script>
-      
-      
-        // Sélectionnez toutes les div-content
-        const divs = document.querySelectorAll('.div-content');
+<script>
+    // Sélectionnez toutes les div-content
+    const divs = document.querySelectorAll('.div-content');
 
-        // Sélectionnez le champ
-        const champ = document.getElementById('mon-champ');
+    // Sélectionnez le champ
+    const champ = document.getElementById('mon-champ');
 
-        // Ajoutez un gestionnaire d'événements de clic à chaque div-content
-        divs.forEach((div) => {
-            div.addEventListener('click', () => {
-                // Vérifiez si le champ est vide
-                if (champ.value.trim() === '') {
-                    // Champ vide, ajoutez la classe "empty" pour l'animation de tremblement
-                    champ.classList.add('empty');
-                } else {
-                    // Champ non vide, retirez la classe "empty" si elle existe
-                    champ.classList.remove('empty');
+    // Ajoutez un gestionnaire d'événements de clic à chaque div-content
+    divs.forEach((div) => {
+        div.addEventListener('click', () => {
+            // Vérifiez si le champ est vide
+            if (champ.value.trim() === '') {
+                // Champ vide, ajoutez la classe "empty" pour l'animation de tremblement
+                champ.classList.add('empty');
 
-                    // Retirez la classe "selected" de toutes les divs
-                    divs.forEach((otherDiv) => {
-                        otherDiv.classList.remove('selected');
-                    });
+                // Ajoutez la classe "shake" pour l'effet de secouement
+                champ.classList.add('shake');
+                
+                // Supprimez la classe "shake" après 0.5s (la durée de l'animation)
+                setTimeout(() => {
+                    champ.classList.remove('shake');
+                }, 500);
+            } else {
+                // Champ non vide, retirez la classe "empty" si elle existe
+                champ.classList.remove('empty');
 
-                    // Retirez la classe "iconeselected" de toutes les icônes
-                    const icons = document.querySelectorAll('.icone');
-                    icons.forEach((icon) => {
-                        icon.classList.remove('iconeselected');
-                    });
+                // Retirez la classe "selected" de toutes les divs
+                divs.forEach((otherDiv) => {
+                    otherDiv.classList.remove('selected');
+                });
 
-                    // Ajoutez la classe "selected" à la div cliquée
-                    div.classList.add('selected');
+                // Retirez la classe "iconeselected" de toutes les icônes
+                const icons = document.querySelectorAll('.icone');
+                icons.forEach((icon) => {
+                    icon.classList.remove('iconeselected');
+                });
 
-                    // Trouvez l'icône à l'intérieur de la div cliquée
-                    const icon = div.querySelector('.icone');
+                // Ajoutez la classe "selected" à la div cliquée
+                div.classList.add('selected');
 
-                    // Ajoutez la classe "iconeselected" à l'icône
-                    icon.classList.add('iconeselected');
-                }
-            });
+                // Trouvez l'icône à l'intérieur de la div cliquée
+                const icon = div.querySelector('.icone');
+
+                // Ajoutez la classe "iconeselected" à l'icône
+                icon.classList.add('iconeselected');
+            }
         });
-    </script>
+    });
+</script>
           
           
 
@@ -956,6 +982,15 @@ input:focus, button:focus, textarea:focus {
           <img class="imageray" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/domains-happy-chat-1.png?v=1697904052263" >
 
   </div>
+  
+  
+          <div class="div-structurebis">
+        <div class="div-contentbis">
+        <img class="iconebis" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz.svg?v=1698163862117" alt="Icône">
+        <p class="titrexbis">Infographie</p>
+        </div>
+               
+    </div>
   
   
       <footer>
