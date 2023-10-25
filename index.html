@@ -739,10 +739,10 @@ input:focus, button:focus, textarea:focus {
         <div class="colonneX3">
           
           
-    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" required placeholder="Je veux |" maxlength="20" autocomplete="off">
+    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" required placeholder="" maxlength="30" autocomplete="off">
     
     <script>
-        var words = [" Catalogue Magasin", " des illustrations", " une brochure", " une infographie", " une plaquette", " un flyer"];
+        var words = [" Catalogue Magasin", " des illustrations", " une « Brochure Salon»", " une infographie", " une plaquette", " un flyer"];
         var currentWordIndex = 0;
         var textElement = document.getElementById("mon-champ");
         var currentCharIndex = 0;
@@ -753,7 +753,7 @@ input:focus, button:focus, textarea:focus {
         function typeNextWord() {
             var currentWord = words[currentWordIndex];
             if (currentCharIndex < currentWord.length) {
-                textElement.setAttribute("placeholder", "Entrez un titre " + currentWord.substring(0, currentCharIndex + 1) + "|");
+                textElement.setAttribute("placeholder", "Entrez un titre" + currentWord.substring(0, currentCharIndex + 1) + "|");
                 currentCharIndex++;
                 setTimeout(typeNextWord, typingSpeed);
             } else {
