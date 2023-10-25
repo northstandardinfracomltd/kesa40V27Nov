@@ -753,7 +753,7 @@ input:focus, button:focus, textarea:focus {
         function typeNextWord() {
             var currentWord = words[currentWordIndex];
             if (currentCharIndex < currentWord.length) {
-                textElement.setAttribute("placeholder", "Entrez un titre comme" + currentWord.substring(0, currentCharIndex + 1) + "|");
+                textElement.setAttribute("placeholder", "Entrez un titre " + currentWord.substring(0, currentCharIndex + 1) + "|");
                 currentCharIndex++;
                 setTimeout(typeNextWord, typingSpeed);
             } else {
