@@ -1111,7 +1111,7 @@ input:focus, button:focus, textarea:focus {
            
         width: 80% !important;
                     
-        color: #a6a6a6;
+        color: #fff;
     text-align: left;
     font-family: "senseistandard" !important;
     letter-spacing: 0px;
@@ -1131,7 +1131,7 @@ input:focus, button:focus, textarea:focus {
            
         width: 80% !important;
                     
-        color: #a6a6a6;
+        color: #fff;
     text-align: left;
     font-family: "senseistandard" !important;
     letter-spacing: 0px;
@@ -1150,7 +1150,7 @@ input:focus, button:focus, textarea:focus {
            
         width: 80% !important;
                     
-        color: #a6a6a6;
+        color: #fff;
     text-align: left;
     font-family: "senseistandard" !important;
     letter-spacing: 0px;
@@ -1169,7 +1169,7 @@ input:focus, button:focus, textarea:focus {
            
         width: 80% !important;
                     
-        color: #a6a6a6;
+        color: #fff;
     text-align: left;
     font-family: "senseistandard" !important;
     letter-spacing: 0px;
@@ -1180,7 +1180,7 @@ input:focus, button:focus, textarea:focus {
       
       
                .message-bubble8 {
-            background-color: #DCF8C6;
+            background-color: #04383F;
             padding: 10px;
             border-radius: 20px 20px 0px 20px;
             
@@ -1189,7 +1189,7 @@ input:focus, button:focus, textarea:focus {
            
         width: 80% !important;
                     
-        color: #a6a6a6;
+        color: #fff;
     text-align: left;
     font-family: "senseistandard" !important;
     letter-spacing: 0px;
@@ -1200,7 +1200,7 @@ input:focus, button:focus, textarea:focus {
       
       
                .message-bubble9 {
-            background-color: #DCF8C6;
+            background-color: #04383F;
             padding: 10px;
             border-radius: 20px 20px 0px 20px;
             
@@ -1209,7 +1209,7 @@ input:focus, button:focus, textarea:focus {
            
         width: 80% !important;
                     
-        color: #a6a6a6;
+        color: #fff;
     text-align: left;
     font-family: "senseistandard" !important;
     letter-spacing: 0px;
@@ -1229,7 +1229,7 @@ input:focus, button:focus, textarea:focus {
            
         width: 80% !important;
                     
-        color: #a6a6a6;
+        color: #fff;
     text-align: left;
     font-family: "senseistandard" !important;
     letter-spacing: 0px;
@@ -1356,35 +1356,44 @@ input:focus, button:focus, textarea:focus {
                 </div>
             </div>
         </div>
+           <!-- Bouton "Continuer la conversation" -->
+        <button id="continueButton" style="display: none;">Continuer la conversation</button>
+   
     </div>
+ <script>
+        // Tableau des IDs, y compris "continueButton"
+        const divIds = [
+            'showdiv1', 'showdiv2', 'showdiv3', 'showdiv31', 'showdiv32', 'showdiv4', 'showdiv5',
+            'showdiv6', 'showdiv7', 'showdiv71', 'showdiv72', 'showdiv8', 'showdiv9', 'showdiv10', 'continueButton'
+        ];
 
-    <script>
-        // Fonction pour faire apparaître les div avec un délai de 1,5 secondes
-        function showDivsWithDelay() {
-            const divIds = ['showdiv1', 'showdiv2', 'showdiv3', 'showdiv31', 'showdiv32','showdiv4', 'showdiv5', 'showdiv6', 'showdiv7', 'showdiv71', 'showdiv72', 'showdiv8', 'showdiv9', 'showdiv10'];
-            let currentIndex = 0;
+        let currentIndex = 0;
 
-            function showNextDiv() {
-                if (currentIndex < divIds.length) {
-                    const currentDivId = divIds[currentIndex];
-                    const currentDiv = document.getElementById(currentDivId);
-                    if (currentDiv) {
-                        currentDiv.style.display = 'block';
-                        currentIndex++;
-                        setTimeout(showNextDiv, 820); // Délai de 1,5 secondes (1500 ms)
+        // Fonction pour faire apparaître le prochain div
+        function showNextDiv() {
+            if (currentIndex < divIds.length) {
+                const currentDivId = divIds[currentIndex];
+                const currentDiv = document.getElementById(currentDivId);
+                if (currentDiv) {
+                    currentDiv.style.display = 'block';
+                    currentIndex++;
+
+                    // Si on atteint le bouton "Continuer la conversation", ajoute un gestionnaire de clic
+                    if (currentDivId === 'continueButton') {
+                        const continueButton = document.getElementById('continueButton');
+                        if (continueButton) {
+                            continueButton.addEventListener('click', showNextDiv);
+                        }
+                    } else {
+                        setTimeout(showNextDiv, 1500); // Délai de 1,5 secondes (1500 ms)
                     }
                 }
             }
-
-            showNextDiv();
         }
 
         // Appeler la fonction lorsque la page est chargée
-        window.addEventListener('load', showDivsWithDelay);
+        window.addEventListener('load', showNextDiv);
     </script>
-
-
-  
   
   
 
