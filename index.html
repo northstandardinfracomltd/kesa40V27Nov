@@ -248,6 +248,42 @@
     position: sticky;
     top: 0;
 }
+      
+      
+      
+      
+@media (min-width: 100px) and (max-width: 819px) {
+       .barre-navigation {
+  z-index: 1 !important;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Trois colonnes égales en largeur */
+    gap: 10px; /* Espacement entre les colonnes */
+  background: #212121 !important;
+  border-bottom: 1px #3b3b3b solid;
+  height: 190px;
+      position: -webkit-sticky; /* Pour une compatibilité avec les navigateurs WebKit */
+    position: sticky;
+    top: 0;
+}
+}
+      
+      
+@media (min-width: 820px) and (max-width: 1066px)  {
+   .barre-navigation {
+  z-index: 1 !important;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales en largeur */
+    gap: 10px; /* Espacement entre les colonnes */
+  background: #212121 !important;
+  border-bottom: 1px #3b3b3b solid;
+  height: 84px;
+      position: -webkit-sticky; /* Pour une compatibilité avec les navigateurs WebKit */
+    position: sticky;
+    top: 0;
+}
+}
+      
+      
 
 /* Style des colonnes */
       
