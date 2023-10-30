@@ -27,6 +27,7 @@
     background: #212121;
     margin: 0px !important;
     overflow-x: hidden;
+        
          }
       
           .div-lidar {
@@ -260,7 +261,7 @@
     gap: 10px; /* Espacement entre les colonnes */
   background: #212121 !important;
   border-bottom: 1px #3b3b3b solid;
-  height: 88px;
+  height: 85px;
       position: -webkit-sticky; /* Pour une compatibilité avec les navigateurs WebKit */
     position: sticky;
     top: 0;
@@ -492,6 +493,7 @@ background: #553326;
     width: 87%;
                          margin-left: auto;
                          margin-right: auto;
+                         margin-top: -1px;
 }
       
 }
@@ -821,7 +823,10 @@ input:focus, button:focus, textarea:focus {
       
       
       
-      
+      body {
+  margin: 0px !important;
+  overflow-x: hidden !important;
+}
       
     </style>
 </head>
@@ -1094,6 +1099,21 @@ input:focus, button:focus, textarea:focus {
             margin: 20px auto;
             font-family: Arial, sans-serif;
         }
+      
+      
+      
+      
+@media (min-width: 100px) and (max-width: 819px) {
+                   .chat-container {
+            width: 100% !important;
+                     max-width: 200px;
+                     padding-left: 10px;
+                     padding-right: 10px;
+                     
+        }
+}
+      
+      
 
         .message {
             display: flex;
