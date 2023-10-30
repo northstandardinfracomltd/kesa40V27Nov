@@ -252,9 +252,7 @@
 /* Style de la barre de navigation */
 .barre-navigation {
   z-index: 1 !important;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales en largeur */
-    gap: 10px; /* Espacement entre les colonnes */
+    display: flex;
   background: #212121 !important;
   border-bottom: 1px #3b3b3b solid;
   height: 84px;
@@ -269,9 +267,7 @@
 @media (min-width: 100px) and (max-width: 819px) {
        .barre-navigation {
   z-index: 1 !important;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Trois colonnes égales en largeur */
-    gap: 10px; /* Espacement entre les colonnes */
+    display: flex;
   background: #212121 !important;
   border-bottom: 1px #3b3b3b solid;
   height: 85px;
@@ -285,9 +281,7 @@
 @media (min-width: 820px) and (max-width: 1066px)  {
    .barre-navigation {
   z-index: 1 !important;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales en largeur */
-    gap: 10px; /* Espacement entre les colonnes */
+    display: flex;
   background: #212121 !important;
   border-bottom: 1px #3b3b3b solid;
   height: 84px;
@@ -311,7 +305,7 @@
     display: block;
         margin-left: auto;
   margin-right: auto;
-        width: 90%;
+        width: 60%;
   
 }
       
@@ -339,6 +333,7 @@
   align-items: center !important;
     display: block;
   margin-right: auto;
+  width: 10%;
   
 }
       
@@ -362,11 +357,14 @@
       .colonneX2 {
     background-color: transparent;
     padding: 18px 13px 20px 20px;
-    text-align: center;
-  display: flex;
+    text-align: right;
+  display: block;
         margin-left: auto;
-   justify-content: center; 
-        align-items: center !important;
+   justify-content: right; 
+        align-items: right !important;
+          width: 10%;
+        mergin-left: auto;
+
 }
 
       
