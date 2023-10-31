@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <meta name="google" content="notranslate" />
 <meta charset="utf-8" />
-<title>Késako Français — Each interaction matters</title>
+<title>Kesako Français — Each interaction matters</title>
 <link rel="icon" href="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz%20Favicon%20UTF.png?v=1698178909135"/>
 <link rel="canonical" href="kesako.xyz" />
 <meta name="description" content="SaaS engineers based in London, we provide end-to-end SaaS solutions such as internal software, consumer platforms, and startup applications." />
@@ -26,7 +26,8 @@
       body {
     background: #212121;
     margin: 0px !important;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+        
          }
       
           .div-lidar {
@@ -38,6 +39,10 @@
         }
   
 
+      ::selection {
+  background-color: #ffd00082;
+  color: #2a2a32; /* Couleur du texte sélectionné */
+}
       
         /* Style de la div parente */
         .div-parente {
@@ -51,6 +56,8 @@
           
         }
       
+      
+
 
 
         /* Style de la div enfant */
@@ -63,6 +70,18 @@
             padding: 20px; /* Ajoute un peu d'espace intérieur */
         }
       
+      
+      
+      
+      
+@media (min-width: 100px) and (max-width: 819px) {
+        .div-enfant {
+            padding: 25px; /* Ajoute un peu d'espace intérieur */
+        }
+}
+      
+      
+      
               .div-structure {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -70,10 +89,30 @@
             grid-gap: 18px;
             width: 100%;
         }
+      
+@media (min-width: 100px) and (max-width: 819px) {
+             .div-structure {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            grid-gap: 18px;
+            width: 100%;
+        }
+}
+      
+      
+@media (min-width: 820px) and (max-width: 1066px)  {
+           .div-structure {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 18px;
+            width: 100%;
+        }
+}
 
         .div-content {
             background-color: #262626;
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 20px;
             text-align: center;
             cursor: pointer; /* Change le curseur au survol */
@@ -140,7 +179,11 @@
               letter-spacing: 0px;
               font-size: 16px;
               font-weight: 500 !important;
+              line-height: 30px;
         }
+      
+      
+    
       
 
               /* Style du lien bouton bleu */
@@ -172,17 +215,23 @@
       
         /* Style du sous-titre avec une classe */
         .sous-titre-dummy {
-            font-size: 16px;
+            font-size: 18px;
               letter-spacing: 0px;
             text-align: center;
             color: #a6a6a6; /* Couleur du texte */
               font-family: "senseistandard" !important;
           font-weight: 500 !important;
-          margin-left: 40px;
-    margin-right: 40px;
-    line-height: 25px;
+          margin-left: auto;
+    margin-right: auto;
+          max-width: 300px;
+    line-height: 30px;
         }
       
+      @media (min-width: 100px) and (max-width: 819px) {
+           .sous-titre-dummy {
+          max-width: 220px !important;
+        }
+}
       
 
               /* Style de l'icône */
@@ -212,9 +261,7 @@
 /* Style de la barre de navigation */
 .barre-navigation {
   z-index: 1 !important;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales en largeur */
-    gap: 10px; /* Espacement entre les colonnes */
+    display: flex;
   background: #212121 !important;
   border-bottom: 1px #3b3b3b solid;
   height: 84px;
@@ -222,6 +269,38 @@
     position: sticky;
     top: 0;
 }
+      
+      
+      
+      
+@media (min-width: 100px) and (max-width: 819px) {
+       .barre-navigation {
+  z-index: 1 !important;
+    display: flex;
+  background: #212121 !important;
+  border-bottom: 1px #3b3b3b solid;
+  height: 85px;
+      position: -webkit-sticky; /* Pour une compatibilité avec les navigateurs WebKit */
+    position: sticky;
+    top: 0;
+}
+}
+      
+      
+@media (min-width: 820px) and (max-width: 1066px)  {
+   .barre-navigation {
+  z-index: 1 !important;
+    display: flex;
+  background: #212121 !important;
+  border-bottom: 1px #3b3b3b solid;
+  height: 84px;
+      position: -webkit-sticky; /* Pour une compatibilité avec les navigateurs WebKit */
+    position: sticky;
+    top: 0;
+}
+}
+      
+      
 
 /* Style des colonnes */
       
@@ -235,8 +314,24 @@
     display: block;
         margin-left: auto;
   margin-right: auto;
-        width: 90%;
+        width: 60%;
   
+}
+      
+      
+            @media (min-width: 100px) and (max-width: 819px) {
+          .colonneX3 {
+                max-width: 100% !important;
+                padding-left: 20px !important;
+                            padding-right: 0px !important;
+
+            text-align: center;
+            display: block;
+ width: 95%;
+
+
+}
+      
 }
       
       
@@ -248,17 +343,37 @@
   align-items: center !important;
     display: block;
   margin-right: auto;
+  width: 10%;
   
 }
+      
+      @media (min-width: 100px) and (max-width: 819px) {
+          .colonneX {
+    display: none !important;  
+
+}
+      
+}
+      
+      
+            @media (min-width: 100px) and (max-width: 819px) {
+          .colonneX2 {
+ width: 5% !important;
+}
+}
+      
       
       .colonneX2 {
     background-color: transparent;
     padding: 18px 13px 20px 20px;
-    text-align: center;
-  display: flex;
+    text-align: right;
+  display: block;
         margin-left: auto;
-   justify-content: center; 
-        align-items: center !important;
+   justify-content: right; 
+        align-items: right !important;
+          width: 10%;
+        mergin-left: auto;
+
 }
 
       
@@ -269,8 +384,22 @@
     cursor: pointer;
     position: relative;
    margin-right: 15px;
-  margin-top: 7px;
+  margin-top: 17px;
+  margin-left: auto;
 }
+      
+      
+                  @media (min-width: 100px) and (max-width: 819px) {
+.menu-icon {
+
+   margin-right: 10px !important;
+  margin-top: 17px !important;
+  margin-left: -8px !important;
+}
+}
+      
+      
+      
 
 .icon {
     width: 30px;
@@ -302,7 +431,7 @@
     border: 1px solid #3b3b3b;
     border-radius: 12px;
     color: #a6a6a6;
-    min-width: 125px;
+    min-width: 180px;
     padding-top: 13px;
     padding-bottom: 13px;
   padding-left: 13px;
@@ -310,22 +439,57 @@
    cursor: default;
 }
 
+      
+                  @media (min-width: 100px) and (max-width: 819px) {
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: -9px;
+    background-color: #2b2b2b;
+    border: 1px solid #3b3b3b;
+    border-radius: 12px;
+    color: #a6a6a6;
+    min-width: 180px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  padding-left: 13px;
+  padding-right: 13px;
+   cursor: default;
+}
+}
+      
+      
+      
 .item {
+    display: block;
     padding: 10px 9px 12px 10px;
     text-align: center;
     cursor: pointer;
    font-family: "senseistandard" !important;
   font-size: 16px !important;
   letter-spacing: 0px !important;
-  border-radius: 12px;
+  border-radius: 10px;
+  background: #2b2b2b;
+        color: #A6A6A6;
+        box-shadow: 0 0 0px 4px transparent;
+    cursor: pointer;
+  text-decoration: none;
+  margin-top: 5px;
 }
 
+      .itemBBB {
+  margin-top: 0px !important;
+}
       
       .item:hover {
-background: rgb(255, 108, 55);
+background: #553326;
         color: #fff;
-        box-shadow: 0 0 0px 4px #008eff38;
+        box-shadow: 0 0 0px 2px #553326;
     cursor: pointer;
+          text-decoration: none;
+         
+
 }
       
       
@@ -371,7 +535,7 @@ background: rgb(255, 108, 55);
     border-radius: 12px;
     font-size: 16px;
               letter-spacing: 0px;
-    width: 200px;
+    max-width: 200px;
               height: 25px;
               font-color: #a6a6a6;
         text-align: center;
@@ -380,6 +544,21 @@ background: rgb(255, 108, 55);
               background: #2B2B2B;
                cursor: text;
 }
+      
+      
+      
+@media (min-width: 100px) and (max-width: 819px) {
+                       .projectname {
+
+    width: 93%;
+                         margin-left: auto;
+                         margin-right: auto;
+                         margin-top: -1px;
+}
+      
+}
+      
+      
       
       
                     .projectname:hover {
@@ -563,8 +742,8 @@ input:focus, button:focus, textarea:focus {
 /* Styler l'animation au survol */
 .profile-circle:hover .profile-name {
     display: block;
-   top: 34px;
-  left: 43px;
+   top: 42px;
+  left: 39px;
   height: 17px;
   font-size: 11px;
   color: #a6a6a6;
@@ -572,9 +751,9 @@ input:focus, button:focus, textarea:focus {
   font-weight: 500 !important;
   background-color: #2b2b2b;
     border: 1px solid #3b3b3b;
-    border-radius: 10px;
-  padding-top: 4px;
-  padding-bottom: 3px;
+    border-radius: 9px;
+  padding-top: 5px;
+  padding-bottom: 4px;
 }
 
       
@@ -614,24 +793,27 @@ input:focus, button:focus, textarea:focus {
         }
 
         #circle1 {
-            background-image: url('https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Matias%20Photo.png?v=1698088993651');
+            background-image: url('https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Sacha%20From%20Kesako%20US.png?v=1698246658797');
             background-size: cover;
           margin-left: -11px;
           border: 3px solid #212121;
+           display: none !important;
         }
       
              #circle2 {
-            background-image: url('https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Matias%20Photo.png?v=1698088993651');
+            background-image: url('https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Elsie.png?v=1698246939217');
             background-size: cover;
           margin-left: -11px;
           border: 3px solid #212121;
+                display: none !important;
         }
       
             #circle0 {
-            background-image: url('https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Ronan%20Roesch%20Photo.png?v=1698088625224');
+            background-image: url('https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Ronan.png?v=1698246940190');
             background-size: cover;
           margin-left: -11px;
           border: 3px solid #212121;
+              display: none !important;
         }
       
       
@@ -640,12 +822,13 @@ input:focus, button:focus, textarea:focus {
             background-image: url('https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/ddedededeienivez.svg?v=1698087765263');
             background-size: cover;
           margin-left: -11px;
-    width: 25px !important;
-    height: 25px !important;
+    width: 30px !important;
+    height: 30px !important;
            padding: 3px;
   margin-top: -0.5px;
                      border: 3px solid #212121;
            background-color: #212121;
+           cursor: default !important;
         }
       
 
@@ -682,6 +865,29 @@ input:focus, button:focus, textarea:focus {
     100% { transform: translate(0); }
   }
       
+      
+      
+                    .div-structurebis {
+            margin-left: auto;
+                      margin-right: auto;
+                      max-width: 700px !important;
+        }
+
+        .div-contentbis {
+            background-color: #21759b;
+            border-radius: 30px 30px 0px 0px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer; /* Change le curseur au survol */
+        }
+      
+      
+      
+      body {
+  margin: 0px !important;
+  overflow-x: hidden !important;
+}
+      
     </style>
 </head>
 <body>
@@ -692,11 +898,11 @@ input:focus, button:focus, textarea:focus {
         <div class="profile-circle" id="circle1" onmouseover="showName('Sacha est en ligne', this)" onmouseout="hideName(this)">
             <div class="profile-name"></div>
         </div>
-        <div class="profile-circle" id="circle2" onmouseover="showName('Abigael est en ligne', this)" onmouseout="hideName(this)">
+        <div class="profile-circle" id="circle2" onmouseover="showName('Marius est en ligne', this)" onmouseout="hideName(this)">
             <div class="profile-name"></div>
         </div>
       
-       <div class="profile-circle" id="circle7" onmouseover="showName('Marius est en ligne', this)" onmouseout="hideName(this)">
+       <div class="profile-circle" id="circle7" onmouseover="showName('Kesako.xyz', this)" onmouseout="hideName(this)">
             <div class="profile-name"></div>
         </div>
         <div class="profile-circle" id="circle3" onmouseover="showName('Comduo est disponible', this)" onmouseout="hideName(this)">
@@ -726,10 +932,10 @@ input:focus, button:focus, textarea:focus {
         <div class="colonneX3">
           
           
-    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" required placeholder="Je veux |" maxlength="20" autocomplete="off">
+    <input type="text" id="mon-champ" class="projectname" pattern="[a-z_]{1,50}" required placeholder="" maxlength="30" autocomplete="off">
     
     <script>
-        var words = [" Catalogue Magasin", " des illustrations", " une brochure", " une infographie", " une plaquette", " un flyer"];
+        var words = [" ''Le parc et ses activités'' ", " ''Options et détails produits'' ", " ''Les services de l'enseigne'' ", " ''Processus de fabrication'' ", " ''Univers cycles magasin'' ", " ''Extrait résumé formation'' ", " ''L'histoire de la marque'' "];
         var currentWordIndex = 0;
         var textElement = document.getElementById("mon-champ");
         var currentCharIndex = 0;
@@ -740,7 +946,7 @@ input:focus, button:focus, textarea:focus {
         function typeNextWord() {
             var currentWord = words[currentWordIndex];
             if (currentCharIndex < currentWord.length) {
-                textElement.setAttribute("placeholder", "Entrez un titre comme" + currentWord.substring(0, currentCharIndex + 1) + "|");
+                textElement.setAttribute("placeholder", "Essayez" + currentWord.substring(0, currentCharIndex + 1) + "|");
                 currentCharIndex++;
                 setTimeout(typeNextWord, typingSpeed);
             } else {
@@ -782,14 +988,11 @@ input:focus, button:focus, textarea:focus {
             <div class="dot"></div>
             <div class="dot"></div>
         </div>
-        <div class="dropdown" id="dropdown">
-            <div class="item">English</div>
-            <div class="item">Késako</div>
-           <div class="item">Références</div>
-
-            <div class="item">Contact</div>
-          <div class="item">Mentions</div>
-        </div>
+    <div class="dropdown" id="dropdown">
+        <a class="item itemBBB" href="/uk">Kesako UK English</a>
+        <a class="item" href="/fossil-free-company">Fossil Free Company</a>
+        <a class="item" href="/terms-privacy">Terms and Privacy</a>
+    </div>
     </div>
     <script>
         // JavaScript pour gérer le clic sur l'icône
@@ -821,13 +1024,14 @@ input:focus, button:focus, textarea:focus {
 
 
 
-              <h2 class="sous-titre-dummy">Une fois un titre ajouté — Sélectionnez une catégorie</h2>
+              <h2 class="sous-titre-dummy">Enter a title, then select a category or format</h2>
+
 <br>
           <br>
         <div class="div-structure">
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz.svg?v=1698163862117" alt="Icône">
-        <p class="titrex">Infographie</p>
+        <p class="titrex">Infographic</p>
         </div>
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz.svg?v=1698163862117" alt="Icône">
@@ -835,7 +1039,7 @@ input:focus, button:focus, textarea:focus {
         </div>
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz.svg?v=1698163862117" alt="Icône">
-        <p class="titrex">Catalogue</p>
+        <p class="titrex">Catalog</p>
         </div>
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz.svg?v=1698163862117" alt="Icône">
@@ -847,7 +1051,7 @@ input:focus, button:focus, textarea:focus {
         </div>
         <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz.svg?v=1698163862117" alt="Icône">
-        <p class="titrex">Manuel</p>
+        <p class="titrex">Manual</p>
         </div>
               <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz.svg?v=1698163862117" alt="Icône">
@@ -855,7 +1059,7 @@ input:focus, button:focus, textarea:focus {
         </div>
               <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz.svg?v=1698163862117" alt="Icône">
-        <p class="titrex">Livret</p>
+        <p class="titrex">Booklet</p>
         </div>
               <div class="div-content">
         <img class="icone" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Kesako.xyz.svg?v=1698163862117" alt="Icône">
@@ -865,49 +1069,59 @@ input:focus, button:focus, textarea:focus {
     </div>
 
 
-    <script>
-        // Sélectionnez toutes les div-content
-        const divs = document.querySelectorAll('.div-content');
+<script>
+    // Sélectionnez toutes les div-content
+    const divs = document.querySelectorAll('.div-content');
 
-        // Sélectionnez le champ
-        const champ = document.getElementById('mon-champ');
+    // Sélectionnez le champ
+    const champ = document.getElementById('mon-champ');
 
-        // Ajoutez un gestionnaire d'événements de clic à chaque div-content
-        divs.forEach((div) => {
-            div.addEventListener('click', () => {
-                // Vérifiez si le champ est vide
-                if (champ.value.trim() === '') {
-                    // Champ vide, ajoutez la classe "empty" pour l'animation de tremblement
-                    champ.classList.add('empty');
-                } else {
-                    // Champ non vide, retirez la classe "empty" si elle existe
-                    champ.classList.remove('empty');
+    // Ajoutez un gestionnaire d'événements de clic à chaque div-content
+    divs.forEach((div) => {
+        div.addEventListener('click', () => {
+            // Vérifiez si le champ est vide
+            if (champ.value.trim() === '') {
+                // Champ vide, ajoutez la classe "empty" pour l'animation de tremblement
+                champ.classList.add('empty');
 
-                    // Retirez la classe "selected" de toutes les divs
-                    divs.forEach((otherDiv) => {
-                        otherDiv.classList.remove('selected');
-                    });
+                // Ajoutez la classe "shake" pour l'effet de secouement
+                champ.classList.add('shake');
+                
+                // Supprimez la classe "shake" après 0.5s (la durée de l'animation)
+                setTimeout(() => {
+                    champ.classList.remove('shake');
+                }, 500);
+            } else {
+                // Champ non vide, retirez la classe "empty" si elle existe
+                champ.classList.remove('empty');
 
-                    // Retirez la classe "iconeselected" de toutes les icônes
-                    const icons = document.querySelectorAll('.icone');
-                    icons.forEach((icon) => {
-                        icon.classList.remove('iconeselected');
-                    });
+                // Retirez la classe "selected" de toutes les divs
+                divs.forEach((otherDiv) => {
+                    otherDiv.classList.remove('selected');
+                });
 
-                    // Ajoutez la classe "selected" à la div cliquée
-                    div.classList.add('selected');
+                // Retirez la classe "iconeselected" de toutes les icônes
+                const icons = document.querySelectorAll('.icone');
+                icons.forEach((icon) => {
+                    icon.classList.remove('iconeselected');
+                });
 
-                    // Trouvez l'icône à l'intérieur de la div cliquée
-                    const icon = div.querySelector('.icone');
+                // Ajoutez la classe "selected" à la div cliquée
+                div.classList.add('selected');
 
-                    // Ajoutez la classe "iconeselected" à l'icône
-                    icon.classList.add('iconeselected');
-                }
-            });
+                // Trouvez l'icône à l'intérieur de la div cliquée
+                const icon = div.querySelector('.icone');
+
+                // Ajoutez la classe "iconeselected" à l'icône
+                icon.classList.add('iconeselected');
+            }
         });
-    </script>
+    });
+</script>
+          
+          
 
-  <a href="#" class="lien-violet" id="btn">Lancer la production</a>
+  <a href="/uk129892938292302329323203023" class="lien-violet" id="btn">Initiate production</a>
 
   <script>
     document.getElementById("btn").addEventListener("click", function(event) {
@@ -934,16 +1148,553 @@ input:focus, button:focus, textarea:focus {
          </div>
   
   
-  
-  
-  <div class="grid-container">
-          <img class="imageray" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/domains-happy-chat-1.png?v=1697904052263" >
 
-  </div>
+  
+  
+  
+
+    <style>
+        .chat-container {
+            width: 400px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+      
+      
+      
+      
+@media (min-width: 100px) and (max-width: 819px) {
+                   .chat-container {
+            width: 100% !important;
+                     max-width: 320px;
+                     padding-left: 5px;
+                     margin-left: auto;
+                     margin-right: auto;
+                     padding-right: 42px !important;
+        }
+}
+      
+      
+
+        .message {
+            display: flex;
+            margin: 10px;
+        }
+      
+        .messaget2 {
+            display: block;
+ cursor: default;
+      }
+
+        .sender-message {
+            flex-direction: row;
+            width: 100%; 
+           cursor: default;
+        }
+
+        .receiver-message {
+            flex-direction: row-reverse;
+           cursor: default;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 0px;
+            margin-right: 14px;
+           cursor: default;
+        }
+      
+            .profile-pic1 {
+              width: 40px;
+            height: 40px;
+            border-radius: 0px;
+            margin-right: 14px;
+           cursor: default;
+        }
+      
+            .profile-pic2 {
+                  width: 40px;
+            height: 40px;
+            border-radius: 0px;
+            margin-right: 14px;
+           cursor: default;
+        }
+
+        .message-bubble {
+            background-color: #DCF8C6;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 70%;
+          cursor: default;
+        }
+      
+      
+      
+      
+@media (min-width: 100px) and (max-width: 819px) {
+      .message-bubble1 {
+                 width: 70% !important;
+        
+        }
+}
+      
+      
+      
+      .message-bubble1 {
+            background-color: #04383F;
+            padding: 10px;
+            border-radius: 20px 20px 20px 0px;
+      
+        margin-bottom: 5px;
+      cursor: default;
+                 width: 55% ;
+        
+        
+            padding: 14px 22px 14px 22px;
+        
+        color: #fff;
+    text-align: left;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: 500 !important;
+        line-height: 23px;
+        
+        
+        }
+      
+      .message-bubble2 {
+            background-color: #04383F;
+            padding: 10px;
+            border-radius: 0px 20px 20px 20px;
+            line-height: 22px;
+        margin-top: 5px;
+            cursor: default;
+        width: 80% !important;
+               padding: 14px 22px 14px 22px;
+        color: #fff;
+    text-align: left;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: 500 !important;
+        }
+      
+         .message-bubble3 {
+            background-color: #21759b;
+            padding: 10px;
+            border-radius: 20px 20px 0px 20px;
+            
+        margin-top: 22px;
+            cursor: default;
+           line-height: 22px;
+        width: 44% !important;
+            padding: 14px 22px 14px 22px;
+        color: #fff;
+    text-align: left;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: 500 !important;
+         
+        }
+      
+      
+               .message-bubble4 {
+            background-color: #04383F;
+            padding: 10px;
+            border-radius: 20px 20px 20px 0px;
+               padding: 14px 22px 14px 22px;
+        margin-top: 5px;
+            cursor: default;
+           line-height: 22px;
+        width: 90% !important;
+                    
+        color: #fff;
+    text-align: left;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: 500 !important;
+         
+        }
+      
+      
+               .message-bubble5 {
+            background-color: #04383F;
+            padding: 10px;
+            border-radius: 0px 20px 20px 0px;
+              padding: 14px 22px 14px 22px;
+        margin-top: 5px;
+            cursor: default;
+           line-height: 22px;
+        width: 82% !important;
+                    
+        color: #fff;
+    text-align: left;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: 500 !important;
+         
+        }
+      
+               .message-bubble6 {
+            background-color: #04383F;
+            padding: 10px;
+            border-radius: 0px 20px 20px 20px;
+                 padding: 14px 22px 14px 22px;
+        margin-top: 5px;
+            cursor: default;
+           
+        width: 75% !important;
+                    
+        color: #fff;
+    text-align: left;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: 500 !important;
+         line-height: 22px;
+        }
+      
+               .message-bubble7 {
+            background-color: #21759b;
+            padding: 10px;
+            border-radius: 20px 20px 0px 20px;
+              padding: 14px 22px 14px 22px;
+        margin-top: 22px;
+            cursor: default;
+           line-height: 22px;
+        width: 71% !important;
+                    
+        color: #fff;
+    text-align: left;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: 500 !important;
+         
+        }
+      
+      
+               .message-bubble8 {
+            background-color: #04383F;
+            padding: 10px;
+            border-radius: 20px 20px 20px 0px;
+            
+        margin-top: 5px;
+            cursor: default;
+              padding: 14px 22px 14px 22px;
+        width: 82% !important;
+                    line-height: 22px;
+        color: #fff;
+    text-align: left;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: 500 !important;
+         
+        }
+      
+      
+               .message-bubble9 {
+            background-color: #04383F;
+            padding: 10px;
+            border-radius: 0px 20px 20px 20px;
+            
+        margin-top: 5px;
+            cursor: default;
+              padding: 14px 22px 14px 22px;
+        width: 75% !important;
+                    line-height: 22px;
+        color: #fff;
+    text-align: left;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: 500 !important;
+         
+        }
+      
+      
+               .message-bubble10 {
+            background-color: #DCF8C6;
+            padding: 10px;
+            border-radius: 20px 20px 0px 20px;
+              padding: 14px 22px 14px 22px;
+        margin-top: 5px;
+            cursor: default;
+           line-height: 22px;
+        width: 80% !important;
+                    
+        color: #fff;
+    text-align: left;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: 500 !important;
+         
+        }
+      
+      
+                  .message-bubble18 {
+            background-color: #DCF8C6;
+            padding: 10px;
+            border-radius: 20px 20px 0px 20px;
+              padding: 14px 22px 14px 22px;
+        margin-top: 5px;
+            cursor: default;
+           line-height: 22px;
+        width: 80% !important;
+                    
+        color: #fff;
+    text-align: left;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: 500 !important;
+         
+        }
+      
+      
+          .sendername {
+                  color: #a6a6a6; /* Couleur du texte */
+            text-align: left; /* Alignement du texte au centre */
+               font-family: "senseistandard" !important;
+              letter-spacing: 0px;
+              font-size: 16px;
+              font-weight: 500 !important;
+            cursor: default;
+        }
+      
+             .sendername1 {
+                  color: #a6a6a6; /* Couleur du texte */
+            text-align: left; /* Alignement du texte au centre */
+               font-family: "senseistandard" !important;
+              letter-spacing: 0px;
+              font-size: 16px;
+              font-weight: 500 !important;
+            cursor: default;
+        }
+      
+        
+             .sendername2 {
+                  color: #a6a6a6; /* Couleur du texte */
+            text-align: left; /* Alignement du texte au centre */
+               font-family: "senseistandard" !important;
+              letter-spacing: 0px;
+              font-size: 16px;
+              font-weight: 500 !important;
+            cursor: default;
+        }
+      
+      
+          .messageeffect:hover {
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+}
+      
+      
+      
+            
+      .wrestling  {
+    background-color: #212121 !important;
+        border: 1px solid #212121 !important;
+        padding-left: 0px !important;
+    color: rgb(62, 146, 242)  !important;
+    text-align: center  !important;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px  !important;
+    font-size: 16px !important;
+    text-decoration: none ;
+        cursor: pointer !important;
+        margin-top: 9px;
+}
+      
+            .wrestling:hover  {
+    text-decoration: underline  !important;
+}
+      
+      
+      
+      
+      .laslowbutton  {
+    background-color: #212121 !important;
+        border: 1px solid #212121 !important;
+        padding-left: 0px !important;
+    color: rgb(62, 146, 242)  !important;
+    text-align: center  !important;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px  !important;
+    font-size: 16px !important;
+    text-decoration: none ;
+        cursor: pointer !important;
+        margin-top: 9px;
+}
+      
+            .laslowbutton:hover  {
+    text-decoration: underline  !important;
+}
+       
+      
+           .toplink  {
+    background-color: #212121 !important;
+        border: 1px solid #212121 !important;
+        padding-left: 0px !important;
+    color: rgb(62, 146, 242)  !important;
+    text-align: center  !important;
+    font-family: "senseistandard" !important;
+    letter-spacing: 0px  !important;
+    font-size: 16px !important;
+    text-decoration: none ;
+        cursor: pointer !important;
+        margin-top: 9px;
+}
+      
+            .toplink:hover  {
+    text-decoration: underline  !important;
+}
+      
+   
+                .retoplink {
+            color: #a6a6a6; /* Couleur du texte */
+            text-align: center; /* Alignement du texte au centre */
+               font-family: "senseistandard" !important;
+              letter-spacing: 0px;
+              font-size: 16px;
+              font-weight: 500 !important;
+        }
+      
+      .profile-pic1,
+      .sendername1,
+       .profile-pic2,
+      .sendername2,
+        .message-bubble2,
+        .message-bubble3,
+        .message-bubble4,
+        .message-bubble5,
+        .message-bubble6,
+        .message-bubble7,
+        .message-bubble8,
+        .message-bubble9,
+      .message-bubble18,
+        .message-bubble10 {
+            display: none;
+    
+        }
+      
+    </style>
+  
+  
+  <br>  <br>  <br> <br> <br> <br><br>
+  
+    <div class="chat-container">
+      
+
+      
+      
+      
+        <div class="message sender-message messageeffect">
+        
+            <img class="profile-pic" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/KesakoHelper.svg?v=1698240714202" alt="Expéditeur">
+            <div  class="messaget2">
+                <p class="sendername">Files Content Editor</p>
+                <div class="message-bubble1">
+                    Puis-je vous partager des renseignements?
+                </div>
+              
+                            <!-- Bouton pour commencer l'apparition des divs -->
+        <button id="startButton" class="laslowbutton">En savoir plus sur Kesako</button>
+
+              
+                <div id="showdiv2" class="message-bubble2">
+                    Tout d'abord — Bienvenue sur Kesako.
+                </div>
+            </div>
+        </div>
+        <div class="message receiver-message">
+            <div id="showdiv3" class="message-bubble3 messageeffect">
+                Comment se déroule un projet avec Kesako? 
+            </div>
+        </div>
+        <div class="message sender-message messageeffect">
+            <img  id="showdiv31" class="profile-pic1" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/KesakoHelper.svg?v=1698240714202" alt="Expéditeur">
+            <div class="messaget2">
+                <p id="showdiv32" class="sendername1">Files Content Editor</p>
+                <div id="showdiv4" class="message-bubble4">
+                  Transférez simplement à Kesako vos idées, demandes, requêtes et critères — Ainsi que tout contenu déjà existant, le cas échéant.
+                                </div>
+                <div id="showdiv5" class="message-bubble5">
+                   Après un ou plusieurs appel(s) d'idéation, et pour converser sur votre projet — Nous créons de A à Z votre fichier personnalisé, exclusif et original parfait pour votre demande — La durée de la prestation est estimée de 2 à 6 semaines en fonction du projet.
+                </div>
+              
+              <div id="showdiv6" class="message-bubble6">
+                  Parce que nous valorisons la singularité et l'alignement avec votre ligne éditoriale et votre charte graphique — Notre processus peut impliquer la création d'illustrations, la sélection ou la création de polices, la rédaction de textes, et d'autres étapes — C'est pourquoi nos délais sont établis en conséquence.
+                </div>
+            </div>
+        </div>
+      
+       <div class="message receiver-message">
+            <div id="showdiv7" class="message-bubble7 messageeffect">
+                Parfait! Pourquoi opter pour Kesako?
+            </div>
+        </div>
+      
+        <div class="message sender-message messageeffect">
+            <img id="showdiv71" class="profile-pic2" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/KesakoHelper.svg?v=1698240714202" alt="Expéditeur">
+            <div class="messaget2 ">
+                <p id="showdiv72" class="sendername2">Files Content Editor</p>
+                <div id="showdiv8" class="message-bubble8">
+                    Complémentaire à notre direction artistique créative, personnalisée, contextualisée et stratégique, nous offrons d'autres options — Il peut s'agir, par exemple si votre fichier est volumineux, du stockage sur notre serveur en ligne — Et nous fournissons un lien court facile à partager avec vos clients, lecteurs ou utilisateurs.
+                </div>
+                <div id="showdiv9" class="message-bubble9">
+                    Sauf demande contraire, nos créations sont conformes aux formats standards pour faciliter leur utilisation ou impression — Nous proposons aussi un service gratuit de révisions et de mises à jour pendant 6 mois — Enfin, nous serions heureux de partager un dossier incluant nos réalisations et références.
+                </div>
+
+                
+          
+            </div>
+        </div>
+
+    </div>
+ <br>
+  <br>  <br> <br><br>
+    <script>
+        const divIds = [
+            'showdiv2', 'showdiv3', 'showdiv31', 'showdiv32',
+            'showdiv4', 'showdiv5', 'showdiv6', 'showdiv7', 'showdiv71',
+            'showdiv72', 'showdiv8', 'showdiv9', 'showdiv10', 'showdiv19', 
+        ];
+
+        let currentIndex = 0;
+
+        function showNextDiv() {
+            if (currentIndex < divIds.length) {
+                const currentDivId = divIds[currentIndex];
+                const currentDiv = document.getElementById(currentDivId);
+                if (currentDiv) {
+                    currentDiv.style.display = 'block';
+                    currentIndex++;
+                    setTimeout(showNextDiv, 400); // Délai de 1,5 secondes (1500 ms)
+                }
+            }
+        }
+
+        // Écouteur d'événement pour démarrer l'apparition des divs
+        document.getElementById('startButton').addEventListener('click', function() {
+            this.style.display = 'none'; // Masque le bouton de démarrage
+            showNextDiv(); // Commence l'apparition des divs
+        });
+    </script>
+  
+
   
   
       <footer>
-        <p>Kesako Français — SMBs and Industry Contents Platform</p>
+<p>Kesako Français — SMBs and Industry Contents Platform — North Standard Infracom Ltd — Contact options ; <a href="mailto:mail@kesako.xyz" class="wrestling">mail@kesako.xyz</a> or <a href="tel:+447723501400" class="wrestling">+44 7723 501400</a></p>
+
     </footer>
   
   
