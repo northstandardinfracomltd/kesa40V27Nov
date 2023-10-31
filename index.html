@@ -489,10 +489,17 @@
       }
 
       .projectname:hover {
-        box-shadow: 0 0 0px 4px #008eff38;
+        box-shadow: 0 0 0px 4px #008eff38 !important;
         cursor: text;
       }
 
+      
+            .projectname:focus {
+        box-shadow: 0 0 0px 4px #008eff38 !important;
+        cursor: text;
+      }
+      
+      
       .grid-container {
         display: block;
         grid-gap: 0px;
@@ -1319,7 +1326,7 @@
         margin-top: 22px;
         cursor: default;
         line-height: 22px;
-        width: 71% !important;
+        width: 71% ;
 
         color: #fff;
         text-align: left;
@@ -1328,6 +1335,13 @@
         font-size: 16px;
         font-weight: 500 !important;
       }
+      
+      
+            @media (min-width: 100px) and (max-width: 819px) {
+           .message-bubble7 {
+        width: 48% !important;
+      }
+}
 
       .message-bubble8 {
         background-color: #04383f;
