@@ -172,18 +172,18 @@
         background-color: transparent;
         width: 100%;
         text-align: center;
-        max-width: 700px !important;
+        max-width: 800px !important;
         margin-right: auto;
         margin-left: auto;
       }
 
       .div-enfant {
         background-color: transparent;
-        max-width: 700px !important;
+        max-width: 800px !important;
         margin: 0 auto;
         border: 1px solid #3b3b3b;
         border-radius: 12px;
-        padding: 21px 21px 21px 21px; 
+        padding: 40px; 
       }
 
       @media (min-width: 100px) and (max-width: 819px) {
@@ -196,7 +196,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-gap: 18px;
+        grid-gap: 20px;
         width: 100%;
       }
 
@@ -220,19 +220,21 @@
       }
 
       .div-content {
-        background-color: #262626;
-        border-radius: 12px;
-        padding: 18px 20px 19px 20px;
         text-align: center;
         cursor: pointer; 
-        height: 50px;
+        height: 35px;      
+        border: 1px solid #d4d4d7;
+    border-radius: 9px;
+    background: #f4f4f4;
+    padding: 20px;
+    box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(188 188 188 / 4%), 0px -18px 10.9766px rgb(189 189 189 / 5%), 0px 14px 20.5812px rgb(203 203 203 / 6%), 0px 12px 41.1623px rgb(163 163 163 / 7%), -20px 0px 89.1851px rgb(255 255 255 / 9%);
       }
 
       .div-content:hover {
-        box-shadow: 0 0 0px 4px #008eff38;
         cursor: pointer;
         transform: scale(1.04);
-        transition-duration: 0.2s;
+        transition-duration: 0s;
+    box-shadow: 0 0 0px 4px #008eff38;
       }
 
       .selected {
@@ -639,13 +641,13 @@
       }
 
       .titrex {
-        font-size: 18px !important;
-        margin-top: 15px !important;
+        font-size: 22px !important;
+        margin-top: 6px !important;
         margin-bottom: 7px !important;
         font-size: 16px;
         letter-spacing: 0px;
-        font-weight: bold;
-        color: #a6a6a6;
+        font-weight: 500;
+        color: #1b1b20;
         font-weight: 500 !important;
         font-family: "senseistandard" !important;
       }
@@ -678,7 +680,7 @@
       }
 
       @font-face {
-        font-family: senseistandard;
+        font-family: senseistandard2;
         src: url("https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/sensei-standard.otf?v=1697967695752")
           format("opentype");
       }
@@ -724,6 +726,52 @@
         src: url("https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Reckless-Bold.otf?v=1700492594758")
           format("opentype");
       }
+      
+      
+      
+      
+      
+      
+      
+      @font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+@font-face {
+  font-family: saasduoTXT;
+  font-weight: bold;
+  src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Primary?v=1692806284277")
+    format("opentype");
+}
+
+@font-face {
+  font-family: saasduoTIL;
+  font-weight: bold;
+  src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Secondary?v=1692806478312")
+    format("opentype");
+}
+
+@font-face {
+  font-family: senseistandard;
+  font-weight: bold;
+  src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20more?v=1692822723823")
+    format("opentype");
+}
+
+@font-face {
+  font-family: saasduoBTN;
+  font-weight: bold;
+  src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Button?v=1692822927520")
+    format("opentype");
+}
 
 
       input[type="text"] {
