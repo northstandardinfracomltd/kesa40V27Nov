@@ -321,6 +321,18 @@
         text-align: center;
       }
 
+      @media (min-width: 100px) and (max-width: 819px) {
+        .masterkane {
+          white-space: inherit;
+        }
+      }
+
+      @media (min-width: 820px) and (max-width: 1066px) {
+        .masterkane {
+          white-space: inherit;
+        }
+      }
+
       .lien-bouton-bleu {
         display: block;
         background-color: rgb(62, 146, 242);
@@ -1112,6 +1124,7 @@
         background-position: center;
         height: 20px;
         border-bottom: 1px solid #d4d4d7;
+        max-width: 100%;
       }
 
       .left-column {
@@ -1163,6 +1176,7 @@
         font-weight: 500 !important;
         cursor: pointer;
         text-decoration: none;
+        white-space: nowrap;
       }
 
       .kineticLink1:hover {
@@ -1179,6 +1193,12 @@
         text-decoration: none;
       }
 
+      @media (min-width: 100px) and (max-width: 819px) {
+        .kineticLink2 {
+          display: none;
+        }
+      }
+
       .kineticLink2:hover {
         text-decoration: underline;
       }
@@ -1193,6 +1213,13 @@
         text-decoration: none;
         letter-spacing: -0.3px;
       }
+
+      @media (min-width: 100px) and (max-width: 819px) {
+        .kineticLink3 {
+          display: none;
+        }
+      }
+
       .kineticLink3:hover {
         text-decoration: underline;
       }
@@ -1219,16 +1246,23 @@
       <div class="left-column">
         <ul class="navkesako442">
           <li>
-            <a class="kineticLink1" href="https://saasduo.com/">Kesako is a SaaSduo Company</a>
+            <a class="kineticLink1" href="https://kesako.xyz/"
+              >Kesako Français</a
+            >
           </li>
-          <li><a class="kineticLink2" href="/fossil-free-company">Sustainability</a></li>
-          <li><a class="kineticLink3" href="/terms-privacy">Terms and Privacy</a></li>
+          <li>
+            <a class="kineticLink2" href="/fossil-free-company"
+              >Sustainability</a
+            >
+          </li>
+          <li>
+            <a class="kineticLink3" href="/terms-privacy">Terms and Privacy</a>
+          </li>
         </ul>
       </div>
       <div class="right-column">
- 
         <a href="/uk"><button class="buttonkesako442">English UK</button></a>
-        </div>
+      </div>
     </div>
 
     <div class="container442lancelot">
@@ -1239,7 +1273,8 @@
         </div>
 
         <div class="subtitle442lancelot">
-          Lorem ipsum dolore sim aesum de ipsum dolore sim aesum de ipsum dolore sim aesum
+          Lorem ipsum dolore sim aesum de ipsum dolore sim aesum de ipsum dolore
+          sim aesum
         </div>
       </div>
     </div>
@@ -1391,7 +1426,7 @@
                 href="/uk129892938292302329323203023"
                 class="lien-violet"
                 id="btn"
-                >Commencons à créer</a
+                >Lancer la production</a
               >
             </div>
 
@@ -2095,7 +2130,7 @@
 
     <footer>
       <p class="masterkane">
-        Kesako Français — SMBs and Industry Contents Platform — North Standard
+        <a href="mailto:mail@kesako.xyz" class="wrestling">A SaaSduo Company</a> — SMBs and Industry Contents Platform — North Standard
         Infracom Ltd — Contact options ;
         <a href="mailto:mail@kesako.xyz" class="wrestling">mail@kesako.xyz</a>
         or <a href="tel:+447723501400" class="wrestling">+44 7723 501400</a>
