@@ -151,7 +151,7 @@
       
       
       body {
-        background: #fffdf9;
+        background: #fff;
         margin: 0px !important;
         overflow-x: hidden !important;
       }
@@ -238,9 +238,10 @@
       }
 
       .selected {
-        background-color: #553326 !important;
-        box-shadow: 0 0 0px 2px rgb(255, 108, 55);
-        color: #fff !important;
+        background-color: #fff !important;
+        box-shadow: 0 0 0px 3px #06f;
+        color: #1b1b20 !important;
+        border: 1px solid 
       }
 
       .selected .titrex,
@@ -249,9 +250,9 @@
       }
 
       .selected:hover {
-        background-color: #553326 !important;
-        box-shadow: 0 0 0px 2px rgb(255, 108, 55);
-        color: #fff !important;
+        background-color: #fff !important;
+        box-shadow: 0 0 0px 3px #06f;
+        color: #1b1b20 !important;
       }
 
 
@@ -574,18 +575,23 @@
 
       .projectname {
         padding: 10px;
-        border: 1px solid #3b3b3b;
-        border-radius: 12px;
-        font-size: 17px;
         letter-spacing: 0px;
-        max-width: 200px;
-        height: 27px;
         font-color: #a6a6a6;
-        text-align: center;
         width: 100%;
-        max-width: 500px;
-        background: #2b2b2b;
+        background: #fff;
         cursor: text;
+        display: block;
+            height: 30px;
+    border: 3px solid #ffd000;
+    border-radius: 9px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    font-family: "saasduoPAR";
+    font-size: 19px;
+    text-align: center;
+    color: #5d5c69 !important;
+        margin-bottom: 20px;
+        
       }
 
       @media (min-width: 100px) and (max-width: 819px) {
@@ -1063,7 +1069,7 @@
     
     
      <h2 class="sous-titre-dummy">
-            Entrez un titre, ensuite sélectionnez une catégorie ou format
+            Débutons
           </h2>
     
     <div class="div-lidar">
@@ -1074,6 +1080,8 @@
         
         <div class="div-enfant">
 
+          <div class="btnlancelot">
+            
  <input
           type="text"
           id="mon-champ"
@@ -1083,7 +1091,7 @@
           placeholder=""
           maxlength="30"
           autocomplete="off"
-        />
+        /></div>
 
         <script>
           var words = [
@@ -1136,8 +1144,8 @@
 
           setTimeout(typeNextWord, 1000); 
         </script>
-       
-          <div class="div-structure">
+            <div class="div-structure">
+     
             <div class="div-content">
          
               <p class="titrex">Infographie</p>
