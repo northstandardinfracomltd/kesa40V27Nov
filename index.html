@@ -1858,7 +1858,6 @@
         font-size: 16px;
         font-weight: 500 !important;
       }
-
       .profile-pic1,
       .sendername1,
       .profile-pic2,
@@ -1916,37 +1915,37 @@
           
           
           
-          <div id="showdiv2" class="message-bubble2">
+          <div id="showdiv2" class="message-bubble2 showable">
             Tout d'abord — Bienvenue sur Kesako.
           </div>
         </div>
       </div>
-      <div class="message receiver-message">
+      <div class="message receiver-message showable">
         <div id="showdiv3" class="message-bubble3 messageeffect">
           Comment se déroule un projet avec Kesako?
         </div>
       </div>
-      <div class="message sender-message messageeffect">
+      <div class="message sender-message messageeffect showable">
         <img
           id="showdiv31"
-          class="profile-pic1"
+          class="profile-pic1 showable"
           src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/KesakoHelper.svg?v=1698240714202"
           alt="Expéditeur"
         />
         <div class="messaget2">
-          <p id="showdiv32" class="sendername1">Files Content Editor</p>
-          <div id="showdiv4" class="message-bubble4">
+          <p id="showdiv32" class="sendername1 showable">Files Content Editor</p>
+          <div id="showdiv4" class="message-bubble4 showable">
             Transférez simplement à Kesako vos idées, demandes, requêtes et
             critères — Ainsi que tout contenu déjà existant, le cas échéant.
           </div>
-          <div id="showdiv5" class="message-bubble5">
+          <div id="showdiv5" class="message-bubble5 showable">
             Après un ou plusieurs appel(s) d'idéation, et pour converser sur
             votre projet — Nous créons de A à Z votre fichier personnalisé,
             exclusif et original parfait pour votre demande — La durée de la
             prestation est estimée de 2 à 6 semaines en fonction du projet.
           </div>
 
-          <div id="showdiv6" class="message-bubble6">
+          <div id="showdiv6" class="message-bubble6 showable">
             Parce que nous valorisons la singularité et l'alignement avec votre
             ligne éditoriale et votre charte graphique — Notre processus peut
             impliquer la création d'illustrations, la sélection ou la création
@@ -1957,7 +1956,7 @@
       </div>
 
       <div class="message receiver-message">
-        <div id="showdiv7" class="message-bubble7 messageeffect">
+        <div id="showdiv7" class="message-bubble7 messageeffect showable">
           Parfait! Pourquoi opter pour Kesako?
         </div>
       </div>
@@ -1965,20 +1964,20 @@
       <div class="message sender-message messageeffect">
         <img
           id="showdiv71"
-          class="profile-pic2"
+          class="profile-pic2 showable"
           src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/KesakoHelper.svg?v=1698240714202"
           alt="Expéditeur"
         />
         <div class="messaget2">
-          <p id="showdiv72" class="sendername2">Files Content Editor</p>
-          <div id="showdiv8" class="message-bubble8">
+          <p id="showdiv72" class="sendername2 showable">Files Content Editor</p>
+          <div id="showdiv8" class="message-bubble8 showable">
             Complémentaire à notre direction artistique créative, personnalisée,
             contextualisée et stratégique, nous offrons d'autres options — Il
             peut s'agir, par exemple si votre fichier est volumineux, du
             stockage sur notre serveur en ligne — Et nous fournissons un lien
             court facile à partager avec vos clients, lecteurs ou utilisateurs.
           </div>
-          <div id="showdiv9" class="message-bubble9">
+          <div id="showdiv9" class="message-bubble9 showable">
             Sauf demande contraire, nos créations sont conformes aux formats
             standards pour faciliter leur utilisation ou impression — Nous
             proposons aussi un service gratuit de révisions et de mises à jour
@@ -1992,27 +1991,27 @@
       
 
       <div class="message receiver-message">
-        <div id="showdivK1" class="message-bubbleK messageeffect">
+        <div id="showdivK1" class="message-bubbleK messageeffect showable">
           LAST
         </div>
       </div>
-      <div class="message sender-message messageeffect">
+      <div class="message sender-message messageeffect showable">
         <img
           id="showdivK2"
-          class="profile-pic1"
+          class="profile-pic1 showable"
           src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/KesakoHelper.svg?v=1698240714202"
           alt="Expéditeur"
         />
         <div class="messaget2">
-          <p id="showdivK3" class="sendername1">Files Content Editor</p>
-          <div id="showdivK4" class="message-bubbleK1">
+          <p id="showdivK3" class="sendername1 showable">Files Content Editor</p>
+          <div id="showdivK4" class="message-bubbleK1 showable">
             CONTENT1
           </div>
-          <div id="showdivK5" class="message-bubbleK2">
+          <div id="showdivK5" class="message-bubbleK2 showable">
             CONTENT2
           </div>
 
-          <div id="showdivK6" class="message-bubbleK3">
+          <div id="showdivK6" class="message-bubbleK3 showable">
             CONTENT3
           </div>
         </div>
@@ -2028,52 +2027,23 @@
     <br />
     <br />
     <br /><br />
-    <script>
-      const divIds = [
-        "showdiv2",
-        "showdiv3",
-        "showdiv31",
-        "showdiv32",
-        "showdiv4",
-        "showdiv5",
-        "showdiv6",
-        "showdiv7",
-        "showdiv71",
-        "showdiv72",
-        "showdiv8",
-        "showdiv9",
-        "showdiv19",
-        "showdiv4421",
-        "showdivK1",
-        "showdivK2",
-        "showdivK3",
-        "showdivK4",
-        "showdivK5",
-        "showdivK6",
-      ];
+<script>
+    const showableDivs = document.querySelectorAll('.showable');
+    let currentIndex = 0;
 
-      let currentIndex = 0;
-
-      function showNextDiv() {
-        if (currentIndex < divIds.length) {
-          const currentDivId = divIds[currentIndex];
-          const currentDiv = document.getElementById(currentDivId);
-          if (currentDiv) {
-            currentDiv.style.display = "block";
+    function showNextDiv() {
+        if (currentIndex < showableDivs.length) {
+            showableDivs[currentIndex].style.display = 'block';
             currentIndex++;
             setTimeout(showNextDiv, 400);
-          }
         }
-      }
+    }
 
-      
-      document
-        .getElementById("startButton")
-        .addEventListener("click", function () {
-          this.style.display = "none"; 
-          showNextDiv(); 
-        });
-    </script>
+    document.getElementById('startButton').addEventListener('click', function () {
+        this.style.display = 'none';
+        showNextDiv();
+    });
+</script>
 
     
     
