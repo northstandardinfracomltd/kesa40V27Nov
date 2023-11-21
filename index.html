@@ -151,7 +151,7 @@
       
       
       body {
-        background: #212121;
+        background: #fffdf9;
         margin: 0px !important;
         overflow-x: hidden !important;
       }
@@ -161,7 +161,6 @@
         padding-right: 20px;
         z-index: 0;
         margin-top: 20px;
-          display: none;
       }
 
       ::selection {
@@ -990,7 +989,51 @@
         </html>
       </div>
       <div class="colonneX3">
-        <input
+       
+      </div>
+      <div class="colonneX2">
+        <div class="menu-icon" id="menu-icon">
+          <div class="icon" id="icon">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="dropdown" id="dropdown">
+            <a class="item itemBBB" href="/uk">Kesako UK English</a>
+            <a class="item" href="/fossil-free-company">Fossil Free Company</a>
+            <a class="item" href="/terms-privacy">Terms and Privacy</a>
+          </div>
+        </div>
+        <script>
+   
+          const menuIcon = document.getElementById("menu-icon");
+          const icon = document.getElementById("icon");
+
+          menuIcon.addEventListener("click", function () {
+            icon.classList.toggle("active");
+          });
+        </script>
+
+        <a href="https://votre-lien-ici.com" class="boutonclovis"
+          >Cliquez ici</a
+        >
+      </div>
+    </div>
+
+    
+     <h2 class="sous-titre-dummy">
+            Entrez un titre, ensuite sélectionnez une catégorie ou format
+          </h2>
+    
+    <div class="div-lidar">
+      
+      
+      <div class="div-parente">
+        
+        
+        <div class="div-enfant">
+
+ <input
           type="text"
           id="mon-champ"
           class="projectname"
@@ -1052,46 +1095,6 @@
 
           setTimeout(typeNextWord, 1000); 
         </script>
-      </div>
-      <div class="colonneX2">
-        <div class="menu-icon" id="menu-icon">
-          <div class="icon" id="icon">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-          <div class="dropdown" id="dropdown">
-            <a class="item itemBBB" href="/uk">Kesako UK English</a>
-            <a class="item" href="/fossil-free-company">Fossil Free Company</a>
-            <a class="item" href="/terms-privacy">Terms and Privacy</a>
-          </div>
-        </div>
-        <script>
-   
-          const menuIcon = document.getElementById("menu-icon");
-          const icon = document.getElementById("icon");
-
-          menuIcon.addEventListener("click", function () {
-            icon.classList.toggle("active");
-          });
-        </script>
-
-        <a href="https://votre-lien-ici.com" class="boutonclovis"
-          >Cliquez ici</a
-        >
-      </div>
-    </div>
-
-    
-     <h2 class="sous-titre-dummy">
-            Entrez un titre, ensuite sélectionnez une catégorie ou format
-          </h2>
-    
-    <div class="div-lidar">
-      <div class="div-parente">
-        <div class="div-enfant">
-
-
        
           <div class="div-structure">
             <div class="div-content">
@@ -1206,27 +1209,7 @@
       </div>
     </div>
     
-    <script>
-        // Récupération de l'élément input et de la div
-        var monChamp = document.getElementById('mon-champ');
-        var divLidar = document.querySelector('.div-lidar'); // Utilisation de querySelector avec la classe
-
-        // Écouteur d'événement pour le champ de texte
-        monChamp.addEventListener('input', function() {
-            // Vérifier si le champ est vide
-            if (monChamp.value.trim().length >= 1) {
-                // Si le champ n'est pas vide, afficher la div
-                divLidar.style.display = 'block';
-                // Supprimer la classe 'empty' si elle existe
-                monChamp.classList.remove('empty');
-            } else {
-                // Si le champ est vide, masquer la div
-                divLidar.style.display = 'none';
-                // Ajouter la classe 'empty' au champ
-                monChamp.classList.add('empty');
-            }
-        });
-    </script>
+ 
 
     <style>
       .chat-container {
