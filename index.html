@@ -1257,14 +1257,13 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
 
       .danielcraig {
         display: block;
-        max-width: 90%;
+        width: 90%;
               border-radius: 9px;
         box-shadow: #2d2e2e 6px 6px 0 0;
         background: #fff;
                 border: 1px solid #2d2e2e;
         padding: 15px;
         max-width: 550px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 45px;
@@ -1282,6 +1281,14 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
            margin-left: auto;
            margin-right: auto;
       }
+      
+      .divlidar2 {
+            display: none;
+        }
+
+      
+
+      
     </style>
 
     <div class="headerkesako442">
@@ -1324,7 +1331,7 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
               </div>
                    
                      <div class="subtitle442lancelot2">
-          Nommez <span class="highlightkesako"> votre projet</span>
+          Quel titre ajouter à<span class="highlightkesako"> votre projet</span>
         </div>
                    
             </div>
@@ -1386,9 +1393,13 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
 
               setTimeout(typeNextWord, 1000);
             </script>
+
         
+        
+                            <div class="divlidar2">
+
         <div class="subtitle442lancelot">
-          Sélectionnez un type de fichier
+         Ce titre semble génial! Et quel type de fichier souhaitez-vous?
         </div>
         
                     <div class="div-structure">
@@ -1423,7 +1434,33 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
                 <p class="titrex">Autre</p>
               </div>
             </div>
+</div>
+        
+            <script>
+        // Récupération de l'élément input et de la div
+        var monChamp = document.getElementById('mon-champ');
+        var divLidar2 = document.querySelector('.divlidar2');
 
+        // Écouteur d'événement pour le champ de texte
+        monChamp.addEventListener('input', function() {
+            // Vérifier si le champ est vide
+            if (monChamp.value.trim().length >= 1) {
+                // Si le champ n'est pas vide, afficher la divlidar2
+                divLidar2.style.display = 'block';
+                // Supprimer la classe 'empty' si elle existe
+                monChamp.classList.remove('empty');
+            } else {
+                // Si le champ est vide, masquer la divlidar2
+                divLidar2.style.display = 'none';
+                // Ajouter la classe 'empty' au champ
+                monChamp.classList.add('empty');
+            }
+        });
+    </script>
+
+        
+        
+        
             <script>
               const divs = document.querySelectorAll(".div-content");
 
