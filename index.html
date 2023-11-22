@@ -77,9 +77,8 @@
         font-size: 82px;
         margin-bottom: 20px;
         font-family: "saasduoTIL" !important;
-        letter-spacing: 0px;
         color: rgb(45, 46, 46);
-        letter-spacing: 0px !important;
+        letter-spacing: 1px !important;
         padding-left: 18px;
         padding-right: 18px;
         margin-top: 20px;
@@ -1332,7 +1331,7 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
     <div class="container442lancelot">
       <div class="content442lancelot">
         <div class="title442lancelot">
-          Place aux contenus mémorables
+          Partageons des contenus mémorables
         </div>
         <div class="title442lancelot93">
           Place aux contenus mémorables
@@ -1343,20 +1342,21 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
 
                  <div class="danielcraig">
               <div class="btnlancelot">
-                <input
-                  type="text"
-                  id="mon-champ"
-                  class="projectname"
-                  pattern="[a-z_]{1,50}"
-                  required
-                  placeholder=""
-                  maxlength="30"
-                  autocomplete="off"
-                />
+           <input
+            type="text"
+            id="mon-champ"
+            class="projectname"
+            pattern="[a-z_]{1,50}"
+            required
+            placeholder=""
+            maxlength="30"
+            autocomplete="off"
+            oninput="updateTitle()"
+        />
               </div>
                    
                      <div class="subtitle442lancelot2">
-          Quel titre ajouter à<span class="highlightkesako"> votre projet</span>
+          Ajoutez un titre à votre projet<span class="highlightkesako"> avec au minimum 3 caractères</span>
         </div>
                    
             </div>
@@ -1423,9 +1423,21 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
         
                             <div class="divlidar2">
 
-        <div class="subtitle442lancelot">
-         Ce titre semble génial! Et quel type de fichier souhaitez-vous?
-        </div>
+
+    <div class="subtitle442lancelot">
+        Le titre <span id="titreVariable">TITLE</span> semble génial - Et quel type de fichier souhaitez-vous?
+    </div>
+                              
+                              
+    <script>
+        function updateTitle() {
+            // Récupérer la valeur du champ avec l'ID "mon-champ"
+            var champValue = document.getElementById("mon-champ").value;
+
+            // Mettre à jour le contenu de l'élément avec l'ID "titreVariable" avec la valeur du champ
+            document.getElementById("titreVariable").innerText = champValue;
+        }
+    </script>
         
                     <div class="div-structure">
               <div class="div-content">
