@@ -1795,86 +1795,56 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
     
     
     
+    
+
+    <div class="boynapped">
+      
 <div class="containerclientskesako">
   <div class="sliderclientskesako">
-    <div class="slideclientskesako image1clientskesako"></div>
-    <div class="slideclientskesako image2clientskesako"></div>
-    <div class="slideclientskesako image3clientskesako"></div>
-    <div class="slideclientskesako image4clientskesako"></div>
-    <div class="slideclientskesako image5clientskesako"></div>
-    <div class="slideclientskesako image6clientskesako"></div>
-    <div class="slideclientskesako image7clientskesako"></div>
-    <div class="slideclientskesako image8clientskesako"></div>
-    <div class="slideclientskesako image9clientskesako"></div>
-    <div class="slideclientskesako image10clientskesako"></div>
+    <div class="slideclientskesako">
+      <img src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Ronan%20Roesch.png?v=1698088547474" alt="Image 1">
+    </div>
+    <div class="slideclientskesako">
+      <img src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/Matias%20Photo.png?v=1698088993651" alt="Image 2">
+    </div>
+    <!-- Répétez cette structure pour chaque image avec l'URL et l'alt appropriés -->
   </div>
 </div>
 
-<script>
-  const slider = document.querySelector('.sliderclientskesako');
-  let isTransitioning = false;
-
-  function nextSlide() {
-    if (!isTransitioning) {
-      isTransitioning = true;
-      slider.style.transition = 'transform 0.8s ease-in-out';
-      slider.style.transform = 'translateX(-100%)';
-    }
-  }
-
-  function transitionEnd() {
-    isTransitioning = false;
-    slider.style.transition = 'none';
-    slider.style.transform = 'translateX(0)';
-    slider.appendChild(slider.firstElementChild);
-  }
-
-  slider.addEventListener('transitionend', transitionEnd);
-  setInterval(nextSlide, 3000); // Change slide every 3 seconds
-</script>
 
 
-      
-        <style>
+
+  <style>
     .containerclientskesako {
       overflow: hidden;
       width: 100%;
     }
 
     .sliderclientskesako {
-      display: flex;
-      transition: transform 0.8s ease-in-out;
+      white-space: nowrap;
+      animation: scrollAnimation 20s linear infinite; /* Ajustez la durée de l'animation selon vos besoins */
+    }
+
+    @keyframes scrollAnimation {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
 
     .slideclientskesako {
-      min-width: 100%;
+      display: inline-block;
       box-sizing: border-box;
+      width: 10%; /* Ajustez la largeur en pourcentage selon le nombre d'images */
     }
 
     .slideclientskesako img {
-      width: 100%;
+      width: 20px;
       height: auto;
     }
-
-    /* Ajoutez autant de classes d'images que nécessaire */
-    .image1clientskesako, .image2clientskesako, .image3clientskesako, .image4clientskesako, .image5clientskesako, .image6clientskesako, .image7clientskesako, .image8clientskesako, .image9clientskesako, .image10clientskesako {
-      /* Ajoutez les URL des images respectives */
-      background-image: url('image1.jpg');
-    }
-
-    /* Répétez cette classe pour chaque image avec l'URL appropriée */
-    .image2clientskesako {
-      background-image: url('image2.jpg');
-    }
-
-    /* Répétez cette classe pour chaque image avec l'URL appropriée */
-    /* ... */
-
   </style>
-    
-
-    <div class="boynapped">
-      
       
 
       <style>
