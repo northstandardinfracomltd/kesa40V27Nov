@@ -225,7 +225,7 @@ width: 600px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-gap: 20px;
+        grid-gap: 28px !important;
         width: 100%;
       }
 
@@ -256,32 +256,31 @@ width: 600px;
         border-radius: 9px;
         background: #fff;
         padding: 30px 20px 12px 20px;
-        
+        box-shadow:  rgb(215, 213, 210) 6px 6px 0 0
       }
 
       .div-content:hover {
         cursor: pointer;
         transform: scale(1.04);
         transition-duration: 0s;
-        box-shadow: 0 0 0px 4px #008eff38;
       }
 
       .selected {
-        background-color: #fff !important;
-        box-shadow: 0 0 0px 3px #ff4f00;
-        color: #ff4f00 !important;
-        border: 1px solid #fff;
+        background-color: #f0f1fa !important;
+box-shadow:  #3d4592 6px 6px 0 0;
+  color: #ff4f00 !important;
+        border: 1px solid #3d4592 ;
       }
 
       .selected .titrex,
       .selected:hover .titrex {
-        color: #ff4f00;
+        color: #3d4592;
       }
 
       .selected:hover {
-        background-color: #fff !important;
-        box-shadow: 0 0 0px 3px #ff4f00;
-        color: #1b1b20 !important;
+        background-color: #f0f1fa !important;
+box-shadow:  #3d4592 6px 6px 0 0;
+  color: #1b1b20 !important;
       }
 
       footer {
@@ -1090,32 +1089,7 @@ width: 600px;
         </html>
       </div>
       <div class="colonneX3"></div>
-      <div class="colonneX2">
-        <div class="menu-icon" id="menu-icon">
-          <div class="icon" id="icon">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-          <div class="dropdown" id="dropdown">
-            <a class="item itemBBB" href="/uk">Kesako UK English</a>
-            <a class="item" href="/fossil-free-company">Fossil Free Company</a>
-            <a class="item" href="/terms-privacy">Terms and Privacy</a>
-          </div>
-        </div>
-        <script>
-          const menuIcon = document.getElementById("menu-icon");
-          const icon = document.getElementById("icon");
 
-          menuIcon.addEventListener("click", function () {
-            icon.classList.toggle("active");
-          });
-        </script>
-
-        <a href="https://votre-lien-ici.com" class="boutonclovis"
-          >Cliquez ici</a
-        >
-      </div>
     </div>
 
     <style>
@@ -1264,6 +1238,34 @@ background-color: #fff;
         </ul>
       </div>
       <div class="right-column">
+              <div class="colonneX2">
+        <div class="menu-icon" id="menu-icon">
+          <div class="icon" id="icon">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="dropdown" id="dropdown">
+            <a class="item itemBBB" href="/uk">Kesako UK English</a>
+            <a class="item" href="/fossil-free-company">Fossil Free Company</a>
+            <a class="item" href="/terms-privacy">Terms and Privacy</a>
+          </div>
+        </div>
+        <script>
+          const menuIcon = document.getElementById("menu-icon");
+          const icon = document.getElementById("icon");
+
+          menuIcon.addEventListener("click", function () {
+            icon.classList.toggle("active");
+          });
+        </script>
+
+        <a href="https://votre-lien-ici.com" class="boutonclovis"
+          >Cliquez ici</a
+        >
+      </div>
+        
+        
         <a href="/uk"><button class="buttonkesako442">Mon compte</button></a>
       </div>
     </div>
