@@ -1460,61 +1460,57 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
               </div>
             </div>
 
-                              
-                              
-                                  <div class="checkbox-container">
-        <div class="custom-checkbox">
-            <input type="checkbox" id="termsCheckbox">
-            <span class="checkmark"></span>
-        </div>
-        <label for="termsCheckbox" class="checkbox-text">
+                             <br><br> 
+    <div class="radio-container">
+        <label for="termsRadio" class="custom-radio">
+            <input type="radio" id="termsRadio" name="termsRadio">
+            <span class="radio-bullet"></span>
+        </label>
+        <label for="termsRadio" class="radio-text">
             J'ai lu et j'accepte les <span class="link-span"><a href="#" target="_blank">termes et privacy</a></span>
         </label>
     </div>
                               
-                                  <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .checkbox-container {
+                                      <style>
+          .radio-container {
             display: flex;
             align-items: center;
         }
 
-        .custom-checkbox {
+        .custom-radio {
             position: relative;
             display: inline-block;
             width: 20px;
             height: 20px;
-            background-color: #ddd;
-            border-radius: 4px;
+            background-color: transparent;
+            border-radius: 50%;
             margin-right: 10px;
+            border: 2px solid #3e4592;
         }
 
-        .custom-checkbox input {
+        .custom-radio input {
             position: absolute;
             opacity: 0;
             cursor: pointer;
         }
 
-        .checkmark {
+        .radio-bullet {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 12px;
-            height: 12px;
-            border-radius: 2px;
-            background-color: #2196F3;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #3e4592;
             display: none;
         }
 
-        .custom-checkbox input:checked + .checkmark {
+        .custom-radio input:checked ~ .radio-bullet {
             display: block;
         }
 
-        .checkbox-text {
+        .radio-text {
             font-size: 16px;
         }
 
@@ -1524,6 +1520,7 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
             cursor: pointer;
         }
     </style>
+                              
                               
             <div class="btnlancelot">
               <a
@@ -1549,7 +1546,7 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
         // Écouteur d'événement pour le champ de texte
         monChamp.addEventListener('input', function() {
             // Vérifier si le champ est vide
-            if (monChamp.value.trim().length >= 1) {
+            if (monChamp.value.trim().length >= 3) {
                 // Si le champ n'est pas vide, afficher la divlidar2
                 divLidar2.style.display = 'block';
                 // Supprimer la classe 'empty' si elle existe
@@ -1627,10 +1624,8 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
     </div>
 
     <div class="boynapped">
-      <div class="div-lidar">
-        <div class="div-parente">
-          <div class="div-enfant">
-         
+      
+      
 
       <style>
         .btnlancelot {
@@ -2318,9 +2313,9 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
             showNextDiv();
           });
       </script>
-    </div>
-          </div>
-        </div>
+      
+      
+
       </div>
 
 
