@@ -39,32 +39,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
 
-  <script>
-    // Fonction pour ralentir le défilement
-    function slowDownScroll(event) {
-      // Ajustez la valeur pour changer la vitesse du ralentissement
-      var scrollSpeed = 0.5;
 
-      // Empêcher le comportement de défilement par défaut
-      event.preventDefault();
-
-      // Calculer la nouvelle position de défilement
-      var delta = event.deltaY || event.detail || event.wheelDelta;
-      var newScrollTop = window.scrollY + delta * scrollSpeed;
-
-      // Faire défiler la page à la nouvelle position
-      window.scrollTo(0, newScrollTop);
-    }
-
-    // Ajouter un écouteur d'événements pour le défilement
-    if (window.addEventListener) {
-      // Les navigateurs modernes
-      window.addEventListener("wheel", slowDownScroll);
-    } else {
-      // Anciens navigateurs
-      window.attachEvent("onmousewheel", slowDownScroll);
-    }
-  </script>
     
     <style>
       body442lancelot {
@@ -1738,6 +1713,35 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
         
         
         
+      <div class="kesakoCustomers">
+      <img class="kesakoCustomersimg" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/dejndejdnedn.svg?v=1700740532920" alt="Image 3">
+      
+      </div>
+      
+
+  <style>
+    .kesakoCustomers {
+      width: 100%;
+      max-width: 593px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 30px;
+      margin-bottom: -30px;
+    }
+    
+        .kesakoCustomersimg {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+
+    
+    
+  </style>
+        
+        
+        
             <script>
         // Récupération de l'élément input et de la div
         var monChamp = document.getElementById('mon-champ');
@@ -2529,30 +2533,6 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
       </script>
       
       
-      <div class="kesakoCustomers">
-      <img class="kesakoCustomersimg" src="https://cdn.glitch.global/db00b4f2-c5a9-4a16-86f0-60cb4fe5b4d1/dejndejdnedn.svg?v=1700740532920" alt="Image 3">
-      
-      </div>
-      
-
-  <style>
-    .kesakoCustomers {
-      width: 100%;
-      max-width: 600px;
-      margin-right: auto;
-      margin-left: auto;
-    }
-    
-        .kesakoCustomersimg {
-      width: 100%;
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-
-    
-    
-  </style>
 
       
       
