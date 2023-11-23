@@ -37,11 +37,41 @@
     <!-- CSS -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+  <script>
+    // Fonction pour ralentir le défilement
+    function slowDownScroll(event) {
+      // Ajustez la valeur pour changer la vitesse du ralentissement
+      var scrollSpeed = 0.5;
+
+      // Empêcher le comportement de défilement par défaut
+      event.preventDefault();
+
+      // Calculer la nouvelle position de défilement
+      var delta = event.deltaY || event.detail || event.wheelDelta;
+      var newScrollTop = window.scrollY + delta * scrollSpeed;
+
+      // Faire défiler la page à la nouvelle position
+      window.scrollTo(0, newScrollTop);
+    }
+
+    // Ajouter un écouteur d'événements pour le défilement
+    if (window.addEventListener) {
+      // Les navigateurs modernes
+      window.addEventListener("wheel", slowDownScroll);
+    } else {
+      // Anciens navigateurs
+      window.attachEvent("onmousewheel", slowDownScroll);
+    }
+  </script>
+    
     <style>
       body442lancelot {
         margin: 0;
         font-family: "Arial", sans-serif;
       }
+      
 
       .orange-button442lancelot {
         padding: 5px 9px;
@@ -123,16 +153,18 @@
       
                   .title442lancelot93army {
         font-size: 19px !important;
-        margin-bottom: -20px;
+        margin-bottom: -10px;
         font-family: "senseistandard" !important;
         letter-spacing: 0px;
         color: rgb(45, 46, 46);
         letter-spacing: 0px !important;
         padding-left: 18px;
         padding-right: 18px;
-        margin-top: 20px;
+        margin-top: 45px;
         line-height: 36px;
-                    max-width: 500px;
+                    max-width: 550px;
+                    margin-left: auto;
+                    margin-right: auto;
       }
 
       
@@ -205,6 +237,7 @@
         margin-bottom: 10px;
       }
 
+      
       .newButton442lancelot {
         width: 100%;
         padding: 15px;
@@ -1463,7 +1496,7 @@ box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(1
           Partageons des contenus mémorables
         </div>
         <div class="title442lancelot93army">
-         Kesako est un collectif de graphistes, rédacteurs, éditeurs ; spécialisé en création de fichiers orientés sur l'expérience du lecteur, les contenus et le message relayé.
+         Kesako est un collectif de graphistes, rédacteurs, éditeurs ; spécialisé en création de fichiers orientés sur l'expérience du lecteur, les contenus et veiller au bon message relayé.
         </div>
 
       
