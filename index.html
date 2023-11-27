@@ -214,7 +214,7 @@
         margin-right: auto;
         text-align: left !important;
         max-width: 1000px;
-        line-height: 37px;
+        line-height: 30px;
         cursor: default;
         margin-top: 5px;
         margin-bottom: 12px;
@@ -455,6 +455,7 @@ box-shadow:  #3d4592 6px 6px 0 0;
         margin-right: auto;
         margin-left: auto;
         text-align: center;
+            line-height: 36px;
       }
 
       @media (min-width: 100px) and (max-width: 819px) {
@@ -2410,6 +2411,8 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px 0px !important;
           text-decoration: none;
           cursor: pointer !important;
           margin-top: 12px;
+          transition: transform 1s ease-in-out; /* Ajout de l'adoucisseur de transition */
+
         }
 
         .laslowbutton:hover {
@@ -2488,6 +2491,26 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px 0px !important;
             <button id="startButton" class="laslowbutton">
               En savoir plus sur Kesako
             </button>
+            
+            
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const startButton = document.getElementById("startButton");
+
+    function zoomIn() {
+      startButton.style.transform = "scale(1.04)";
+      setTimeout(zoomOut, 1200); // Zoom in for 0.5 seconds
+    }
+
+    function zoomOut() {
+      startButton.style.transform = "scale(1.00)";
+      setTimeout(zoomIn, 1200); // Zoom out for 0.5 seconds
+    }
+
+    // Start the animation
+    zoomIn();
+  });
+</script>
 
             <div id="showdiv2" class="message-bubble2 showable">
               Tout d'abord — Bienvenue sur Kesako.
